@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lea Thiebert | Contact</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+	<header class="site-header">
+		<nav class="nav">
+			<a href="index.html" class="brand">Lea Thiebert</a>
+			<ul class="nav-links">
+				<li><a class="nav-link" data-page="home" href="index.html">Accueil</a></li>
+				<li><a class="nav-link" data-page="projects" href="projets.html">Projets</a></li>
+				<li><a class="nav-link" data-page="contact" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		<section>
+			<p class="eyebrow reveal">Contact</p>
+			<h1 class="reveal">Parlons direction artistique, web et narration visuelle.</h1>
+			<p class="section-intro reveal">
+				Je suis Lea Thiebert, etudiante en MMI. Je suis disponible pour stage, alternance et collab creatives.
+			</p>
+
+			<div class="contact-wrap">
+				<aside class="contact-info reveal">
+					<h3>Infos</h3>
+					<p>Basee en France, disponible en presentiel et a distance.</p>
+					<ul class="contact-links">
+						<li><a href="mailto:lea.thiebert@email.com">lea.thiebert@email.com</a></li>
+						<li><a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
+						<li><a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a></li>
+						<li><a href="https://www.behance.net" target="_blank" rel="noreferrer">Behance</a></li>
+					</ul>
+				</aside>
+
+				<form id="contactForm" class="contact-form reveal">
+					<div class="form-row">
+						<label>
+							Nom
+							<input type="text" name="name" placeholder="Votre nom" required>
+						</label>
+						<label>
+							Email
+							<input type="email" name="email" placeholder="vous@email.com" required>
+						</label>
+					</div>
+					<label>
+						Sujet
+						<input type="text" name="subject" placeholder="Ex: Refonte site vitrine" required>
+					</label>
+					<label>
+						Message
+						<textarea name="message" placeholder="Quelques lignes sur votre besoin" required></textarea>
+					</label>
+					<div class="form-footer">
+						<button class="btn btn-primary" type="submit">Envoyer le message</button>
+						<p class="form-status">Reponse sous 24h.</p>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">2026 - Portfolio Lea Thiebert</div>
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+</html>
