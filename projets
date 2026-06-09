@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lea Thiebert | Projets</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="projects">
+	<header class="site-header">
+		<nav class="nav">
+			<a href="index.html" class="brand">Lea Thiebert</a>
+			<ul class="nav-links">
+				<li><a class="nav-link" data-page="home" href="index.html">Accueil</a></li>
+				<li><a class="nav-link" data-page="projects" href="projets.html">Projets</a></li>
+				<li><a class="nav-link" data-page="contact" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		<section>
+			<p class="eyebrow reveal">Portfolio MMI</p>
+			<h1 class="reveal">Des projets qui melangent composition graphique et code web.</h1>
+			<p class="section-intro reveal">
+				Une approche patchwork/collage: superposition, textures visuelles et rythmes typographiques.
+			</p>
+
+			<div class="projects-grid">
+				<article class="project-card">
+					<img class="project-image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1000&q=80" alt="Projet plateforme energie">
+					<div class="project-content">
+						<h3>Carnet Sensoriel</h3>
+						<p>Projet editorial numerique jouant avec la superposition de photos et de textes.</p>
+						<div class="tags"><span>Editorial</span><span>Grid Libre</span><span>Web</span></div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<img class="project-image" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80" alt="Projet outil collaboration">
+					<div class="project-content">
+						<h3>Affiches Vivantes</h3>
+						<p>Serie d'affiches web animees inspirees des techniques de collage papier.</p>
+						<div class="tags"><span>Motion</span><span>Typo</span><span>JS</span></div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<img class="project-image" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1000&q=80" alt="Projet site immobilier">
+					<div class="project-content">
+						<h3>Musee Fragmente</h3>
+						<p>Parcours interactif d'oeuvres avec navigation par zones et couches visuelles.</p>
+						<div class="tags"><span>Curation</span><span>UX</span><span>Interaction</span></div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<img class="project-image" src="https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=1000&q=80" alt="Projet site restaurant">
+					<div class="project-content">
+						<h3>Atelier Narratif</h3>
+						<p>Site d'auteur avec mise en page asymetrique et transitions de chapitres.</p>
+						<div class="tags"><span>Storytelling</span><span>UI</span><span>CSS</span></div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<img class="project-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80" alt="Projet app mobile finance">
+					<div class="project-content">
+						<h3>Pocket Collage</h3>
+						<p>Prototype mobile de moodboard collaboratif pour selection visuelle rapide.</p>
+						<div class="tags"><span>Mobile</span><span>Prototype</span><span>Figma</span></div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<img class="project-image" src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=1000&q=80" alt="Projet plateforme learning">
+					<div class="project-content">
+						<h3>Studio MMI</h3>
+						<p>Showcase de projets etudiants avec filtres par discipline et mise en valeur des travaux.</p>
+						<div class="tags"><span>Campus</span><span>Front-end</span><span>Galerie</span></div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">2026 - Portfolio Lea Thiebert</div>
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+</html>
