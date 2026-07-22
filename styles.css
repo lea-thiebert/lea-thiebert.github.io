@@ -893,6 +893,12 @@ section {
   display: none;
 }
 
+.postits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Crée la grille responsive */
+  gap: 2rem;
+}
+
 .project-page {
   padding: 3.2rem 0 3.8rem;
 }
