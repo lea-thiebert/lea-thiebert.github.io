@@ -30,16 +30,21 @@ html {
   align-items: center;
   margin-top: 2rem;
 }
-/* FORCE LA VISIBILITÉ ET LA SUPERPOSITION DES POST-ITS */
-.postit-card,
-.postit-link,
+/* 1. L'image prend tout son conteneur */
 .postit-image {
-  opacity: 1 !important;
-  visibility: visible !important;
-  position: relative !important;
-  z-index: 10 !important;
-  filter: none !important;
-  mix-blend-mode: normal !important;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 2. On laisse le JS contrôler la carte, MAIS on sécurise l'état masqué */
+.postit-card.hidden,
+.postit-card[hidden],
+.postit-card.is-hidden {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 /* Côté Gauche : Effet Papier / Scotch sur le CV */
 .cv-preview-wrapper {
