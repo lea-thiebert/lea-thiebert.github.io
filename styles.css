@@ -30,12 +30,16 @@ html {
   align-items: center;
   margin-top: 2rem;
 }
-/* TEST TEMPORAIRE : Force l'affichage des cartes */
+/* FORCE LA VISIBILITÉ ET LA SUPERPOSITION DES POST-ITS */
 .postit-card,
-.postit-card.reveal {
+.postit-link,
+.postit-image {
   opacity: 1 !important;
   visibility: visible !important;
-  transform: none !important;
+  position: relative !important;
+  z-index: 10 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 /* Côté Gauche : Effet Papier / Scotch sur le CV */
 .cv-preview-wrapper {
