@@ -547,7 +547,8 @@ nav a:not(.brand):hover,
   .site-header, header {
     padding: 1rem 1.25rem !important;
     min-height: auto !important;
-  }
+    padding-top: 60px !important; /* Ajoute cette ligne pour créer l'espace */
+}
 
   /* 2. Conteneur principal : force la largeur à 100% et écarte les 2 blocs */
   .nav {
@@ -1439,7 +1440,7 @@ textarea {
   .projects-grid,
   .postits-grid,
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .postit-card:nth-child(4n + 2),
