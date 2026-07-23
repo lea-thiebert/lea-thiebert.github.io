@@ -1,161 +1,201 @@
 // main.js — Portfolio Lea Thiebert
 // Gère : l'état actif de la nav, les animations "reveal" au scroll,
 // l'apparition des post-its / project-cards, les filtres de la page Projets,
-// et le formulaire de contact.
+// et les carrousels par phases.
 
 document.addEventListener("DOMContentLoaded", () => {
-	setActiveNavLink();
-	setupRevealOnScroll();
-	setupCardReveal();
-	setupProjectFilters();
-	setupContactForm();
+    setActiveNavLink();
+    setupRevealOnScroll();
+    setupCardReveal();
+    setupProjectFilters();
+    setupImageCarousels();
 });
 
 /* ------------------------------------------------------------------ */
 /* 1. Lien de navigation actif                                         */
 /* ------------------------------------------------------------------ */
 function setActiveNavLink() {
-	const currentPage = document.body.dataset.page;
-	if (!currentPage) return;
+    const currentPage = document.body.dataset.page;
+    if (!currentPage) return;
 
-	document.querySelectorAll(".nav-link").forEach((link) => {
-		if (link.dataset.page === currentPage) {
-			link.classList.add("active");
-			link.setAttribute("aria-current", "page");
-		}
-	});
+    document.querySelectorAll(".nav-link").forEach((link) => {
+        if (link.dataset.page === currentPage) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+        }
+    });
 }
 
 /* ------------------------------------------------------------------ */
 /* 2. Apparition douce des blocs .reveal au scroll                     */
 /* ------------------------------------------------------------------ */
 function setupRevealOnScroll() {
-	const revealEls = document.querySelectorAll(".reveal");
-	if (!revealEls.length) return;
+    const revealEls = document.querySelectorAll(".reveal");
+    if (!revealEls.length) return;
 
-	if (!("IntersectionObserver" in window)) {
-		revealEls.forEach((el) => el.classList.add("visible"));
-		return;
-	}
+    if (!("IntersectionObserver" in window)) {
+        revealEls.forEach((el) => el.classList.add("visible"));
+        return;
+    }
 
-	const observer = new IntersectionObserver(
-		(entries, obs) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add("visible");
-					obs.unobserve(entry.target);
-				}
-			});
-		},
-		{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-	);
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    obs.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
 
-	revealEls.forEach((el) => observer.observe(el));
+    revealEls.forEach((el) => observer.observe(el));
 }
 
 /* ------------------------------------------------------------------ */
 /* 3. Apparition en cascade des post-its / cartes projets              */
 /* ------------------------------------------------------------------ */
 function setupCardReveal() {
-	const cards = document.querySelectorAll(".postit-link, .project-card");
-	if (!cards.length) return;
+    const cards = document.querySelectorAll(".postit-link, .project-card");
+    if (!cards.length) return;
 
-	if (!("IntersectionObserver" in window)) {
-		cards.forEach((el) => el.classList.add("revealed"));
-		return;
-	}
+    if (!("IntersectionObserver" in window)) {
+        cards.forEach((el) => el.classList.add("revealed"));
+        return;
+    }
 
-	const observer = new IntersectionObserver(
-		(entries, obs) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const el = entry.target;
-					// petit décalage pour un effet de cascade naturel
-					const parent = el.closest("[data-project-grid]") || el.parentElement?.parentElement;
-					const siblings = parent
-						? Array.from(parent.querySelectorAll(".postit-link, .project-card"))
-						: [];
-					const index = siblings.indexOf(el);
-					const delay = index >= 0 ? Math.min(index, 10) * 60 : 0;
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const parent = el.closest("[data-project-grid]") || el.parentElement?.parentElement;
+                    const siblings = parent
+                        ? Array.from(parent.querySelectorAll(".postit-link, .project-card"))
+                        : [];
+                    const index = siblings.indexOf(el);
+                    const delay = index >= 0 ? Math.min(index, 10) * 60 : 0;
 
-					setTimeout(() => el.classList.add("revealed"), delay);
-					obs.unobserve(el);
-				}
-			});
-		},
-		{ threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
-	);
+                    setTimeout(() => el.classList.add("revealed"), delay);
+                    obs.unobserve(el);
+                }
+            });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
+    );
 
-	cards.forEach((el) => observer.observe(el));
+    cards.forEach((el) => observer.observe(el));
 }
 
 /* ------------------------------------------------------------------ */
 /* 4. Filtres + recherche sur la page Projets                          */
 /* ------------------------------------------------------------------ */
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Récupération des éléments du DOM
-  const searchInput = document.querySelector("[data-project-search]");
-  const checkboxes = document.querySelectorAll('input[name="project-filter"]');
-  const projectCards = document.querySelectorAll(".postit-card");
-  const statusText = document.querySelector("[data-project-status]");
-  const emptyMessage = document.querySelector("[data-project-empty]");
+function setupProjectFilters() {
+    const searchInput = document.querySelector("[data-project-search]");
+    const checkboxes = document.querySelectorAll('input[name="project-filter"]');
+    const projectCards = document.querySelectorAll(".postit-card");
+    const statusText = document.querySelector("[data-project-status]");
+    const emptyMessage = document.querySelector("[data-project-empty]");
 
-  // Si on n'est pas sur la page des projets, on arrête le script pour éviter les erreurs
-  if (!searchInput || !projectCards.length) return;
+    if (!searchInput || !projectCards.length) return;
 
-  // 2. Fonction de filtrage globale
-  function filterProjects() {
-    const searchValue = searchInput.value.toLowerCase().trim();
-    
-    // Récupère la liste des valeurs des cases cochées
-    const activeFilters = Array.from(checkboxes)
-      .filter((cb) => cb.checked)
-      .map((cb) => cb.value.toLowerCase());
+    function filterProjects() {
+        const searchValue = searchInput.value.toLowerCase().trim();
+        const activeFilters = Array.from(checkboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value.toLowerCase());
 
-    let visibleCount = 0;
+        let visibleCount = 0;
 
-    projectCards.forEach((card) => {
-      const title = (card.dataset.projectTitle || "").toLowerCase();
-      const tags = (card.dataset.tags || "").toLowerCase().split(" ");
+        projectCards.forEach((card) => {
+            const title = (card.dataset.projectTitle || "").toLowerCase();
+            const tags = (card.dataset.tags || "").toLowerCase().split(" ");
 
-      // Vérification 1 : La recherche texte correspond-elle au titre ou aux tags ?
-      const matchesSearch =
-        searchValue === "" ||
-        title.includes(searchValue) ||
-        tags.some((tag) => tag.includes(searchValue));
+            const matchesSearch =
+                searchValue === "" ||
+                title.includes(searchValue) ||
+                tags.some((tag) => tag.includes(searchValue));
 
-      // Vérification 2 : La carte possède-t-elle TOUS les domaines/tags cochés ?
-      // (Si aucun filtre n'est coché, activeFilters est vide, donc tous les projets passent)
-      const matchesCheckbox =
-        activeFilters.length === 0 ||
-        activeFilters.every((filter) => tags.includes(filter));
+            const matchesCheckbox =
+                activeFilters.length === 0 ||
+                activeFilters.every((filter) => tags.includes(filter));
 
-      // Affichage ou masquage de la carte
-      if (matchesSearch && matchesCheckbox) {
-        card.style.display = ""; // Rétablit le display par défaut (grid/flex/block)
-        visibleCount++;
-      } else {
-        card.style.display = "none";
-      }
+            if (matchesSearch && matchesCheckbox) {
+                card.style.display = "";
+                visibleCount++;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (statusText) {
+            statusText.textContent = `${visibleCount} projet${visibleCount > 1 ? "s" : ""} affiché${visibleCount > 1 ? "s" : ""}`;
+        }
+
+        if (emptyMessage) {
+            emptyMessage.hidden = visibleCount > 0;
+        }
+    }
+
+    searchInput.addEventListener("input", filterProjects);
+    checkboxes.forEach((cb) => cb.addEventListener("change", filterProjects));
+}
+
+/* ------------------------------------------------------------------ */
+/* 5. Carrousels d'images & gestion des Phases (Onglets)              */
+/* ------------------------------------------------------------------ */
+function setupImageCarousels() {
+    const phaseBtns = document.querySelectorAll('.phase-btn');
+    const carousels = document.querySelectorAll('.image-carousel');
+
+    if (!carousels.length) return;
+
+    // --- Bascule entre Phase 1, Phase 2... ---
+    phaseBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-target');
+
+            phaseBtns.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            carousels.forEach((carousel) => {
+                if (carousel.id === targetId) {
+                    carousel.classList.add('active');
+                } else {
+                    carousel.classList.remove('active');
+                }
+            });
+        });
     });
 
-    // 3. Mise à jour du compteur et du message d'état
-    if (statusText) {
-      statusText.textContent = `${visibleCount} projet${visibleCount > 1 ? "s" : ""} affiché${visibleCount > 1 ? "s" : ""}`;
-    }
+    // --- Défilement des images pour chaque carrousel ---
+    carousels.forEach((carousel) => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+        let currentIndex = 0;
 
-    if (emptyMessage) {
-      emptyMessage.hidden = visibleCount > 0;
-    }
-  }
+        if (!slides.length) return;
 
-  // 4. Écouteurs d'événements
-  // Déclenche le filtre au fur et à mesure de la saisie dans le champ de recherche
-  searchInput.addEventListener("input", filterProjects);
+        function updateCarousel() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentIndex);
+            });
+        }
 
-  // Déclenche le filtre à chaque fois qu'une case est cochée/décochée
-  checkboxes.forEach((cb) => {
-    cb.addEventListener("change", filterProjects);
-  });
-});
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateCarousel();
+            });
+        }
 
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            });
+        }
+    });
+}
