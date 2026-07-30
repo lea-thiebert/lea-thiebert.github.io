@@ -92,54 +92,42 @@ function setupCardReveal() {
 /* 4. Filtres + recherche sur la page Projets                          */
 /* ------------------------------------------------------------------ */
 function setupProjectFilters() {
-    const searchInput = document.querySelector("[data-project-search]");
     const checkboxes = document.querySelectorAll('input[name="project-filter"]');
-    const projectCards = document.querySelectorAll(".postit-card");
+    const projects = document.querySelectorAll('.postit-card');
     const statusText = document.querySelector("[data-project-status]");
     const emptyMessage = document.querySelector("[data-project-empty]");
 
-    if (!searchInput || !projectCards.length) return;
+    if (!projects.length) return;
 
-    function filterProjects() {
-        const searchValue = searchInput.value.toLowerCase().trim();
-        const activeFilters = Array.from(checkboxes)
-            .filter((cb) => cb.checked)
-            .map((cb) => cb.value.toLowerCase());
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const activeFilters = Array.from(checkboxes)
+                .filter(i => i.checked)
+                .map(i => i.value);
 
-        let visibleCount = 0;
+            let visibleCount = 0;
 
-        projectCards.forEach((card) => {
-            const title = (card.dataset.projectTitle || "").toLowerCase();
-            const tags = (card.dataset.tags || "").toLowerCase().split(" ");
+            projects.forEach(project => {
+                const tags = project.getAttribute('data-tags').split(' ');
 
-            const matchesSearch =
-                searchValue === "" ||
-                title.includes(searchValue) ||
-                tags.some((tag) => tag.includes(searchValue));
+                // Si aucun filtre n'est coché, on affiche tout.
+                // Sinon, on affiche si le projet possède au moins un des tags sélectionnés.
+                const matches = activeFilters.length === 0 ||
+                    tags.some(tag => activeFilters.includes(tag));
 
-            const matchesCheckbox =
-                activeFilters.length === 0 ||
-                activeFilters.every((filter) => tags.includes(filter));
+                project.style.display = matches ? 'block' : 'none';
+                if (matches) visibleCount++;
+            });
 
-            if (matchesSearch && matchesCheckbox) {
-                card.style.display = "";
-                visibleCount++;
-            } else {
-                card.style.display = "none";
+            if (statusText) {
+                statusText.textContent = `${visibleCount} projet${visibleCount > 1 ? "s" : ""} affiché${visibleCount > 1 ? "s" : ""}`;
+            }
+
+            if (emptyMessage) {
+                emptyMessage.hidden = visibleCount > 0;
             }
         });
-
-        if (statusText) {
-            statusText.textContent = `${visibleCount} projet${visibleCount > 1 ? "s" : ""} affiché${visibleCount > 1 ? "s" : ""}`;
-        }
-
-        if (emptyMessage) {
-            emptyMessage.hidden = visibleCount > 0;
-        }
-    }
-
-    searchInput.addEventListener("input", filterProjects);
-    checkboxes.forEach((cb) => cb.addEventListener("change", filterProjects));
+    });
 }
 
 /* ------------------------------------------------------------------ */
@@ -198,4 +186,12 @@ function setupImageCarousels() {
             });
         }
     });
+
+    // Après avoir trouvé la nouvelle slide active
+    const newActiveSlide = document.querySelector('.carousel-slide.active');
+    const captionText = newActiveSlide.getAttribute('data-caption');
+
+    // Met à jour le texte de la légende
+    const captionElement = document.querySelector('.carousel-caption');
+    captionElement.textContent = captionText;
 }
