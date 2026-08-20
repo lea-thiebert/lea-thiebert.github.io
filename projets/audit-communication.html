@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Audit d'une communication numérique : Musée des Beaux
+			Arts de Nancy</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide" 
+							src="../medias/contenus/audit-com-phase1-img2.png"
+								alt="Analyse Eco-score du site web du Musée des Beaux Arts de Nancy">
+							<img class="carousel-slide" 
+							src="../medias/contenus/audit-com-phase1-img3.png"
+								alt="Analyse de la charte graphique du Musée des Beaux Arts de Nancy sur Figma">
+							<img class="carousel-slide" 
+							src="../medias/contenus/audit-com-phase1-img4.png"
+								alt="Persona créé à partir du public identifié fréquentant le Musée">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
+				</div>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">SAE 101 1ère année de MMI</p>
+					<h1>Audit d'une communication numérique : Musée des Beaux Arts de
+						Nancy</h1>
+					<div class="project-tags">
+						<span>communication</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Ce projet consistait en une analyse pluridisciplinaire du musée des
+							Beaux-Arts de Nancy, couvrant les dimensions économiques, numériques,
+							écologiques et graphiques.<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Communication numérique : Étude détaillée des réseaux sociaux
+								(Instagram,
+								Twitter, YouTube, Facebook) et du site internet. Ce travail a permis de
+								décrypter les logiques de communication dans le secteur culturel et de
+								maîtriser l'analyse de contenus (hashtags, formats).</li>
+
+							<li>Évaluation web & Éco-conception : Audit du site web incluant une
+								arborescence et une analyse de l'éco-score. Cette étape a sensibilisé à
+								la sobriété numérique.</li>
+
+							<li>Analyse socio-économique : Collecte et visualisation de données
+								(fréquentation, publics, concurrence).</li>
+
+							<li>Identité visuelle : Analyse de la charte graphique sur Figma
+								(typographies, couleurs). Malgré une difficulté technique liée au manque
+								de formation sur l'outil, cette phase a permis de comprendre la
+								construction d'une identité visuelle.</li>
+
+							<li>Ciblage & Personas : Identification des publics cibles (critères
+								démographiques, culturels) et création d'un persona représentatif.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce projet a renforcé ma rigueur analytique. Ce travail m'a permis de développer une compréhension
+						globale des stratégies numériques et visuelles d'une institution
+						culturelle.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>Cheffe de projet (stratégie, technique, graphisme et analyses)</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/figma.png" alt="Figma" title="Figma">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+					</div>
+				</article>
+			</div>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Lea Thiebert</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
+</html>
