@@ -1,151 +1,269 @@
 <!DOCTYPE html>
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Projets</title>
+		<link rel="icon" type="image/png" href="medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+			defer></script>
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home" href="index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Léa Thiébert | Portfolio</title>
-        <link rel="icon" type="image/png" href="medias/logo.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
+		<main class="container">
+			<section class="projects-library">
+				<h1 class="section-title reveal">Projets</h1>
 
-    <body data-page="home">
-        <header class="site-header">
-            <nav class="nav">
-                <a href="index.html" class="brand" aria-label="Accueil">
-                    <img class="brand-logo" src="medias/logo.png" alt="Lea Thiebert logo">
-                </a>
-                <ul class="nav-links">
-                    <li><a class="nav-link" data-page="home" href="index.html">Accueil</a></li>
-                    <li><a class="nav-link" data-page="projects"
-                            href="projets.html">Projets</a></li>
-                    <li><a class="nav-link" data-page="contact"
-                            href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+				<div class="project-filters reveal" data-project-filters>
+					<fieldset class="project-checkboxes">
+						<legend>Filtrer par domaine :</legend>
+						<div class="filter-group">
+							<label class="filter-btn"><input type="checkbox" name="project-filter"
+									value="audiovisuel"> Audiovisuel</label>
+							<label class="filter-btn"><input type="checkbox" name="project-filter"
+									value="graphisme"> Graphisme</label>
+							<label class="filter-btn"><input type="checkbox" name="project-filter"
+									value="communication"> Communication</label>
+							<label class="filter-btn"><input type="checkbox" name="project-filter"
+									value="developpement-web"> Développement Web</label>
+							<label class="filter-btn"><input type="checkbox" name="project-filter"
+									value="edi"> EDI</label>
+						</div>
+					</fieldset>
+				</div>
 
-        <main>
-            <section class="hero container" id="hero">
-                <div class="hero-grid">
-                    <div class="reveal">
-                        <p class="eyebrow">Etudiante 2ème année MMI • Recherche de stage de 3ème
-                            année dans le milieu du Graphisme et de la Communication</p>
-                        <h1>Bienvenue sur mon site porfolio ! </h1>
-                        <p>
-                            Je suis Léa Thiébert, étudiante en 3ᵉ année de BUT Mulitmédias et Métiers
-                            de l'Internet. Passionnée par le
-                            design graphique, le web et la création numérique, je cherche un stage
-                            rémunéré de mars à juin 2027 (date à confirmer) dans le milieu du Graphisme et de la
-                            Communication.
-                        </p>
-                        <div class="hero-actions">
-                            <a class="btn btn-primary" href="projets.html">Explorer mes créations
-                                web</a>
-                            <a class="btn btn-outline" href="#cv">En savoir plus sur mes expériences</a>
-                        </div>
-                    </div>
-                    <aside class="hero-card-aside">
-                        <img src="medias/post-its-wide-eyes.png"
-                            alt="Illustration post-its yeux ouverts" class="img-wide">
-                        <img src="medias/post-its-closed-eyes.png"
-                            alt="Illustration post-its yeux fermés" class="img-closed">
-                    </aside>
-                </div>
-            </section>
+				<p class="projects-status" data-project-status aria-live="polite">10 projets
+					affiches</p>
+				<p class="projects-empty" data-project-empty hidden>Aucun projet ne
+					correspond a cette recherche.</p>
 
-            <section class="container" id="skills">
-                <h2 class="section-title reveal">Logiciels &amp; outils</h2>
-                <p class="section-intro reveal">
-                    Les logiciels que j'utilise au quotidien pour mes projets de graphisme,
-                    web et création audio.
-                </p>
-                <div class="skills-grid reveal">
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/figma/390f47" alt="Figma" loading="lazy">
-                        <span>Figma</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobephotoshop/390f47" alt="Photoshop" loading="lazy">
-                        <span>Photoshop</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobeillustrator/390f47" alt="Illustrator" loading="lazy">
-                        <span>Illustrator</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobeindesign/390f47" alt="InDesign" loading="lazy">
-                        <span>InDesign</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobeaudition/390f47" alt="Adobe Audition" loading="lazy">
-                        <span>Audition</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobepremierepro/390f47" alt="Premiere Pro" loading="lazy">
-                        <span>Premiere Pro</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/canva/390f47" alt="Canva" loading="lazy">
-                        <span>Canva</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/blender/390f47" alt="Blender" loading="lazy">
-                        <span>Blender</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/visualstudiocode/390f47" alt="VS Code" loading="lazy">
-                        <span>VS Code</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/github/390f47" alt="GitHub" loading="lazy">
-                        <span>GitHub</span>
-                    </div>
-                </div>
-            </section>
+				<div class="postits-grid" data-project-grid>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/showreel.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/showreel.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal"
+						data-project-title="Audit d'une communication numerique"
+						data-tags="communication">
+						<a class="postit-link" href="projets/audit-communication.html"
+							aria-label="Audit d'une communication numerique">
+							<img class="postit-image" src="./medias/post-its/audit-com.png"
+								alt="Audit de Communication">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/roman-graph.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/roman-graph.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal"
+						data-project-title="Stratégie de communication"
+						data-tags="communication graphisme">
+						<a class="postit-link" href="projets/strat-com.html"
+							aria-label="Stratégie de communication">
+							<img class="postit-image" src="./medias/post-its/strat-com.png"
+								alt="sTRAT2">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/edi-form.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/edi-form.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal"
+						data-project-title="Mini-site éditorial"
+						data-tags="graphisme">
+						<a class="postit-link" href="projets/design-graph.html"
+							aria-label="Mini-site éditorial">
+							<img class="postit-image" src="./medias/post-its/design-graph.png"
+								alt="Post-it projet 3">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/stage-bci.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/stage-bci.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal"
+						data-project-title="Prototype d'application"
+						data-tags=" developpement-web">
+						<a class="postit-link" href="projets/dev-web.html"
+							aria-label="Prototype d'application">
+							<img class="postit-image" src="./medias/post-its/dev-web.png"
+								alt="Post-it projet 4">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/com-transmedias.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/com-transmedias.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/edi-jidd.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/edi-jidd.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal"
+						data-project-title="Interface de moodboard"
+						data-tags="communication graphisme">
+						<a class="postit-link" href="projets/exp-usages.html"
+							aria-label="Interface de moodboard">
+							<img class="postit-image" src="medias/post-its/exp-usages.png"
+								alt="Post-it projet 5">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Club Robotique"
+						data-tags="communication graphisme">
+						<a class="postit-link" href="projets/club-robot.html"
+							aria-label="Club Robotique">
+							<img class="postit-image" src="medias/post-its/club-robot.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal"
+						data-project-title="Portfolio de studio"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/gestion-projet.html"
+							aria-label="Portfolio de studio">
+							<img class="postit-image" src="medias/post-its/gestion-projet.png"
+								alt="Post-it projet 6">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/com-pluri.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/com-pluri.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/edi-pride.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/edi-pride.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal"
+						data-project-title="Interface culturelle" data-tags="graphisme">
+						<a class="postit-link" href="projets/presence-prof.html"
+							aria-label="Interface culturelle">
+							<img class="postit-image" src="medias/post-its/presence-prof.png"
+								alt="Post-it projet 7">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Campagne visuelle"
+						data-tags=" developpement-web">
+						<a class="postit-link" href="projets/web-data.html"
+							aria-label="Campagne visuelle">
+							<img class="postit-image" src="medias/post-its/web-data.png"
+								alt="Post-it projet 8">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Page de récit"
+						data-tags="graphisme communication">
+						<a class="postit-link" href="projets/com-produit.html"
+							aria-label="Page de récit">
+							<img class="postit-image" src="medias/post-its/com-produit.png"
+								alt="Post-it projet 9">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/edi-sexisme.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/edi-sexisme.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/conception-web.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/conception-web.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/edi-menstru.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/edi-menstru.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/photos-com.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/photos-com.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/visu-data.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/visu-data.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+					<article class="postit-card reveal" data-project-title="Tableau d'ensemble"
+						data-tags="communication graphisme audiovisuel">
+						<a class="postit-link" href="projets/fic-sonore.html"
+							aria-label="Tableau d'ensemble">
+							<img class="postit-image" src="medias/post-its/visu-data.png"
+								alt="Post-it projet 10">
+						</a>
+					</article>
+				</div>
+			</section>
+		</main>
 
-            <!-- SECTION CV PIMPÉE -->
-<section class="container" id="cv">
-    <h2 class="section-title reveal">Mon CV</h2>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Lea Thiebert</div>
+		</footer>
 
-    <div class="cv-grid reveal">
-        <!-- Côté gauche : Image du CV avec effet scotch & rotation -->
-        <div class="cv-preview-wrapper">
-            <div class="cv-tape"></div>
-            <img src="medias/mon-cv.png" alt="Aperçu du CV de Léa Thiébert" class="cv-img">
-        </div>
-
-        <!-- Côté droit : Carte info stylisée -->
-        <aside class="cv-card">
-            <h3>Parcours &amp; Compétences</h3>
-            
-            <p class="cv-text">
-                En formation BUT MMI, j'allie <strong>créativité visuelle</strong> et <strong>technique web</strong>. Tu peux consulter l'aperçu de mon CV ou le télécharger directement en version PDF.
-            </p>
-
-            <a href="medias/cv-lea-thiebert.pdf" class="btn btn-primary cv-btn" download>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Télécharger le CV (PDF)
-            </a>
-        </aside>
-    </div>
-</section>
-        </main>
-
-        <footer class="site-footer">
-            <div class="container">2026 - Portfolio Lea Thiebert</div>
-        </footer>
-
-        <script src="main.js"></script>
-    </body>
-
+		<script src="main.js"></script>
+	</body>
 </html>
