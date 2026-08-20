@@ -162,6 +162,9 @@ function setupImageCarousels() {
         const slides = carousel.querySelectorAll('.carousel-slide');
         const prevBtn = carousel.querySelector('.carousel-btn.prev');
         const nextBtn = carousel.querySelector('.carousel-btn.next');
+        // La légende peut être dans le carrousel ou juste après (dans .project-media)
+        const caption = carousel.querySelector('.carousel-caption') ||
+            carousel.parentElement?.querySelector('.carousel-caption');
         let currentIndex = 0;
 
         if (!slides.length) return;
@@ -170,6 +173,14 @@ function setupImageCarousels() {
             slides.forEach((slide, index) => {
                 slide.classList.toggle('active', index === currentIndex);
             });
+
+            const activeSlide = slides[currentIndex];
+
+            if (caption) {
+                const text = activeSlide.dataset.caption || activeSlide.getAttribute('alt') || '';
+                caption.textContent = text;
+                caption.hidden = text === '';
+            }
         }
 
         if (prevBtn) {
@@ -185,13 +196,7 @@ function setupImageCarousels() {
                 updateCarousel();
             });
         }
+
+        updateCarousel();
     });
-
-    // Après avoir trouvé la nouvelle slide active
-    const newActiveSlide = document.querySelector('.carousel-slide.active');
-    const captionText = newActiveSlide.getAttribute('data-caption');
-
-    // Met à jour le texte de la légende
-    const captionElement = document.querySelector('.carousel-caption');
-    captionElement.textContent = captionText;
 }

@@ -923,6 +923,46 @@ section {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+
+/* --- Section "Logiciels & outils" (page d'accueil) --- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 1.15rem;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+  font-weight: 700;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.skill-chip:nth-child(odd) { transform: rotate(-1.5deg); }
+.skill-chip:nth-child(even) { transform: rotate(1.3deg); }
+.skill-chip:nth-child(3n) { transform: rotate(-0.6deg); }
+
+.skill-chip:hover {
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: var(--shadow-strong);
+  background: var(--paper-2);
+}
+
+.skill-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .postits-grid {
   display: grid;
   gap: 0.95rem;
@@ -967,17 +1007,16 @@ section {
 
 /* 1. On cache tous les carrousels par défaut */
 .image-carousel {
-    display: none; 
+    display: none;
     position: relative;
     width: 100%;
-    max-height: 600px;
-    overflow: hidden;
     border-radius: 12px;
 }
 
 /* 2. On affiche UNIQUEMENT celui qui a la classe "active" */
 .image-carousel.active {
-    display: block; 
+    display: flex;
+    justify-content: center;
 }
 
 /* (Optionnel) Style pour que le bouton actif se démarque */
@@ -986,26 +1025,52 @@ section {
     color: #fff;
 }
 
-.carousel-slides {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.project-media {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
-.carousel-slide img {
-    width: 100%;
-    height: auto;         /* L'image définit sa propre hauteur */
-    max-height: 70vh;     /* L'image ne dépassera jamais 70% de la hauteur de l'écran */
-    object-fit: contain;  /* Force l'image à rester entière dans le cadre */
-    display: block;
-    margin: 0 auto;
+.software-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.software-icons img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.software-icons img:hover {
+    transform: scale(1.1); /* Petit effet de zoom sympa au survol */
+}
+
+/* Cadre du carrousel : il épouse la taille réelle de l'image affichée
+   (image en taille naturelle, plafonnée en largeur/hauteur), donc plus
+   aucune bande de couleur autour d'elle, quel que soit son format. */
+.carousel-slides {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 82vh;
+    background-color: #fffdf9;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .carousel-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fffdf9; /* Couleur de fond pour remplir les vides si besoin */
+    display: none;
+    max-width: 100%;
+    max-height: 82vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .carousel-slide.active {
@@ -1016,19 +1081,33 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border: none;
-    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 253, 249, 0.9);
+    color: var(--collage-plum);
+    border: 2px solid var(--collage-plum);
+    padding: 0;
     cursor: pointer;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1;
     z-index: 10;
-    transition: background 0.3s ease;
+    box-shadow: var(--shadow-soft);
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--accent-yellow);
+    color: var(--collage-plum);
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: var(--shadow-strong);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
 .carousel-btn.prev { left: 16px; }
@@ -1070,20 +1149,6 @@ section {
 .phase-btn.active {
     background: #e99e1e; /* Remplace par ta couleur d'accent si besoin */
     color:#390f47;
-}
-
-/* Gestion de l'affichage des carrousels */
-.image-carousel {
-    display: none; /* Masqué par défaut */
-    position: relative;
-    width: 100%;
-    max-height: 600px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.image-carousel.active {
-    display: block; /* Visible uniquement si .active */
 }
 
 .postit-link {
