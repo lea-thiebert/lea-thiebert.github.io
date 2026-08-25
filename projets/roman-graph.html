@@ -1,66 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 8</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Roman Graphique</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+			<div class="project-hero">
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+						<button class="phase-btn" data-target="phase2">Recherches</button>
+					</div>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-8.pdf" aria-label="Aperçu PDF du projet 8"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 8</p>
-				<h1>Campagne visuelle</h1>
-				<div class="project-tags">
-					<span>graphisme</span>
-					<span>communication</span>
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-1.png"
+								alt="Page de couverture du roman graphique The Legend of Zelda, Souvenirs d'enfance">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-2.png"
+								alt="Page du Prologue du roman graphique The Legend of Zelda, Souvenirs d'enfance">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-3.png"
+								alt="Page 3">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-3.png"
+								alt="Page 3">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-4.png"
+								alt="Page 4">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-5.png"
+								alt="Page 5">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-6.png"
+								alt="Page 6">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-7.png"
+								alt="Page 7">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-8.png"
+								alt="Page 8">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-9.png"
+								alt="Page Bonus avec des paysages de la série The Legend of Zelda">
+							<img class="carousel-slide"
+								src="../medias/contenus/roman-graph/page-10.png"
+								alt="Page de remerciements de la part de Matthieu Meriot">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Une fiche projet qui met en avant une piste graphique forte, pensée pour exister à la fois en numérique et en diffusion papier.</p>
+
+				<div class="project-copy reveal">
+					<p class="eyebrow">Projet de 2ème année</p>
+					<h1>Roman graphique : The Legend of Zelda, Souvenirs d'enfance</h1>
+					<div class="project-tags">
+						<span>communication</span>
+					</div>
+					<p>
+
+						<strong>Contexte :</strong><br>
+						Le projet consistait à concevoir un roman graphique à partir d'une
+						histoire préselectionnée, c'est-à-dire à illustrer des extraits choisis ou
+						créés pour l'occasion. Contrairement à la bande dessinée classique, où le
+						dessin fait progresser l'action, l'illustration en roman graphique vient
+						en accompagnement du texte pour suggérer des ambiances et soutenir
+						l'imaginaire du lecteur.<br>
+
+						<strong>Axe d'analyse :</strong><br>
+						<ul><li>Dans un premier temps, mon choix s'est naturellement porté sur
+								<i>The Legendof Zelda : Souvenirs d'enfance</i> de Matthieu Meriot. C'est un livre
+								marquant de la culture internet,de par sa dimension narrative à la
+								fois courte et accessible.</li>
+
+							<li>J'ai ensuite procédé à la mise en page sous InDesign, en répartissant
+								le
+								texte sur plusieurs planches tout en réservant des espaces dédiés aux
+								illustrations.</li>
+
+							<li>Sur Illustrator, j'ai créé les différents éléments graphiques: les
+								personnages (Mathieu, son cousin, son frère) ainsi que divers
+								accessoires
+								et décors (comme sa Nintendo DS, les paysages), pour enrichir le
+								récit.</li>
+
+							<li>Sur le plan artistique, les dessins s'inspirent de la série animée
+								Samuel
+								d'Émilie Tronche. Ce parti pris graphique fait écho à l'esthétique à la
+								fois simple et enfantine qui caractérise l'histoire d'origine.</li>
+
+							<li>J'ai ensuite choisi une police d'écriture simple et presque infantine
+								(Kids Handwritting Regular), pour
+								accentuer l'esthétique de l'ouvrage.</li>
+						</ul>
+					</p>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>La page sert à résumer un système visuel dans une forme courte et accessible.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Choix des couleurs, équilibre des masses et rendu final.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Une direction visuelle lisible, avec suffisamment de caractère pour accrocher le regard.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Contexte</h2>
+					<p>La page sert à résumer un système visuel dans une forme courte et
+						accessible.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle</h2>
+					<p>Choix des couleurs, équilibre des masses et rendu final.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Résultat</h2>
+					<p>Une direction visuelle lisible, avec suffisamment de caractère pour
+						accrocher le regard.</p>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Lea Thiebert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<script src="../pdf-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

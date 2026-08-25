@@ -12,13 +12,12 @@
 			rel="stylesheet">
 		<link rel="stylesheet" href="../styles.css">
 
-		<!-- Style direct pour agrandir la zone vidéo -->
 		<style>
         .project-hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* La vidéo prend plus de place à gauche */
+            display: flex;
+            flex-direction: column; /* Empile les éléments les uns sur les autres */
             gap: 40px;
-            align-items: center;
+            align-items: stretch;
         }
         .project-preview {
             width: 100%;
@@ -83,39 +82,37 @@
 						<span>graphisme</span>
 						<span>audiovisuel</span>
 					</div>
-					<p><ul><strong>Contexte :</strong><br>
+
+					<div class="project-description">
+						<p><strong>Contexte :</strong><br>
 							Lors de notre deuxième année de MMI, nous devions trouver un stage non
 							rémunéré en entreprise. Afin de mettre en avant nos compétences et les
 							différents projets universitaires réalisés à l'IUT, nous devions créer un
-							showreel, une animation de quelques minutes présentant nos travaux.<br>
+							showreel, une animation de quelques minutes présentant nos travaux.</p>
 
-							<strong>Axe d'analyse :</strong><br>
+						<p><strong>Axe d'analyse :</strong></p>
+						<ul>
 							<li>Pour mener à bien ce travail, j'ai commencé par choisir une musique
-								représentative de mes travaux.
-								J'ai donc opté pour le titre « Party at the Bugs Club! » de
-								Spellcasting.
-								Pour éviter que la vidéo ne soit trop longue, j'ai retravaillé le son
-								sur
-								Adobe Audition afin qu'il se coupe proprement.</li>
-
-							<li>Nous devions ensuite sélectionner les
-								travaux à mettre en valeur dans l'animation. Notre professeur nous avait
-								conseillé de cibler un domaine particulier en lien avec notre projet
-								professionnel, mais j'ai choisi de mélanger plusieurs domaines afin de
-								mettre en avant ma pluridisciplinarité et ma polyvalence.</li>
-
-							<li>Une fois les compétences et projets sélectionnés,
-								j'ai mis en forme la vidéo sur After Effects, un logiciel que nous
-								avions
-								découvert grâce à des cours dédiés. Pour réaliser cette vidéo, j'ai
-								néanmoins dû consulter plusieurs ressources afin d'apprendre
-								de nouvelles techniques. Mon objectif était de créer une vidéo
-								dynamique,
-								avec une pointe d'humour dans les animations et les transitions. La
-								majorité des designs ont été réalisés à la main sur Illustrator, le
-								reste
-								étant des assets Canva que j'ai modifiés pour coller à l'ambiance de la
-								vidéo.</li></p></ul>
+								représentative de mes travaux. J'ai donc opté pour le titre « Party at
+								the Bugs Club! » de Spellcasting piur son côté dynamique et joyeux. Pour
+								éviter que la vidéo ne soit trop
+								longue, j'ai retravaillé le son sur Adobe Audition afin qu'il se coupe
+								proprement.</li>
+							<li>Nous devions ensuite sélectionner les travaux à mettre en valeur dans
+								l'animation. Notre professeur nous avait conseillé de cibler un domaine
+								particulier en lien avec notre projet professionnel, mais j'ai choisi de
+								mélanger plusieurs domaines afin de mettre en avant ma
+								pluridisciplinarité et ma polyvalence.</li>
+							<li>Une fois les compétences et projets sélectionnés, j'ai mis en forme
+								la vidéo sur After Effects, un logiciel que nous avions découvert grâce
+								à des cours dédiés. Pour réaliser cette vidéo, j'ai néanmoins dû
+								consulter plusieurs ressources afin d'apprendre de nouvelles techniques.
+								Mon objectif était de créer une vidéo dynamique, avec une pointe
+								d'humour dans les animations et les transitions. La majorité des designs
+								ont été réalisés à la main sur Illustrator, le reste étant des assets
+								Canva que j'ai modifiés pour coller à l'ambiance de la vidéo.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -130,20 +127,22 @@
 				</article>
 				<article class="project-panel reveal">
 					<h2>Rôle</h2>
-					<p>Projet réalisé seule et en autonomie : <br><ul>
-						<li> Choix de la musique et du montage</li>
-						<li> Sélection et organisation des projets</li>
-						<li> Création des designs et animations</li>
-					</ul></p>
+					<p>Projet réalisé seule et en autonomie :</p>
+					<ul>
+						<li>Choix de la musique et du montage</li>
+						<li>Sélection et organisation des projets</li>
+						<li>Création des designs et animations</li>
+					</ul>
 				</article>
 				<article class="project-panel reveal">
 					<h2>Logiciels utilisés :</h2>
 					<div class="software-icons">
-						<img src="../medias/icons/ae.png" alt="After Effects" title="After Effects">
 						<img src="../medias/icons/ai.png" alt="Illustrator" title="Illustrator">
+						<img src="../medias/icons/ae.png" alt="After Effects" title="After Effects">
 						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
 						<img src="../medias/icons/pr.png" alt="Premiere Pro" title="Premiere Pro">
-						<img src="../medias/icons/au.png" alt="Adobe Audition" title="Adobe Audition">
+						<img src="../medias/icons/au.png" alt="Adobe Audition"
+							title="Adobe Audition">
 					</div>
 				</article>
 			</div>
