@@ -12,16 +12,173 @@
             href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+
+        <!-- Styles pour la nouvelle section "à propos de moi" -->
+        <style>
+            #about {
+                margin-top: 4rem;
+                margin-bottom: 4rem;
+            }
+
+            .about-showcase {
+                position: relative;
+                width: min(780px, 94vw);
+                aspect-ratio: 4 / 3;
+                margin: 3.5rem auto 1rem;
+            }
+
+            .about-arrows {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                pointer-events: none;
+            }
+
+            .about-arrows path {
+                fill: none;
+                stroke: #1f2430;
+                stroke-width: 2.5;
+                stroke-linecap: round;
+            }
+
+            .about-photo-wrap {
+                position: absolute;
+                left: 33%;
+                top: 4%;
+                width: 34%;
+                height: 92%;
+                border-radius: 18px 18px 70px 70px;
+                overflow: hidden;
+                background:transparent;
+                z-index: 2;
+            }
+
+            .about-photo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+            }
+
+            .quality-item {
+                position: absolute;
+                width: 160px;
+                z-index: 3;
+            }
+
+            .quality-toggle {
+                position: relative;
+                display: block;
+                width: 100%;
+                background: var(--pill-color, #e2984c);
+                border: none;
+                border-radius: 999px;
+                padding: 0.55rem 1rem;
+                font-family: "Bricolage Grotesque", sans-serif;
+                font-weight: 700;
+                font-size: 0.9rem;
+                color: #1f2430;
+                text-align: left;
+                cursor: pointer;
+                box-shadow: 0 4px 0 rgba(31, 36, 48, 0.15);
+                transition: transform 0.15s ease;
+            }
+
+            .quality-toggle:hover {
+                transform: translateY(-2px);
+            }
+
+            .quality-plus {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #1f2430;
+                color: #fff;
+                font-size: 1rem;
+                line-height: 1;
+                transition: transform 0.2s ease;
+            }
+
+            .quality-item.is-open .quality-plus {
+                transform: rotate(45deg);
+            }
+
+            .quality-detail {
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.3s ease;
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 0.8rem;
+                color: #1f2430;
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(31, 36, 48, 0.12);
+            }
+
+            .quality-item.is-open .quality-detail {
+                max-height: 220px;
+                margin-top: 0.5rem;
+                padding: 0.6rem 0.8rem;
+            }
+
+            /* Positions espacées pour éviter les superpositions à l'ouverture */
+            .quality-1 { left: 0%; top: 2%; --pill-color: #c06ba2; }
+            .quality-2 { left: -3%; top: 38%; --pill-color: #f0d5ac; }
+            .quality-3 { left: 0%; top: 74%; --pill-color: #aa305c; }
+            .quality-4 { left: 75%; top: 2%; --pill-color: #e99e1e; }
+            .quality-5 { left: 78%; top: 38%; --pill-color: #c06ba2; }
+            .quality-6 { left: 75%; top: 74%; --pill-color: #e8be7f; }
+
+            @media (max-width: 720px) {
+                .about-showcase {
+                    width: 100%;
+                    aspect-ratio: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                }
+
+                .about-arrows { display: none; }
+
+                .about-photo-wrap {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    width: 70%;
+                    height: auto;
+                    aspect-ratio: 3 / 4;
+                }
+
+                .quality-item {
+                    position: relative;
+                    left: auto !important;
+                    top: auto !important;
+                    width: min(280px, 80%);
+                }
+            }
+        </style>
     </head>
 
     <body data-page="home">
         <header class="site-header">
             <nav class="nav">
                 <a href="index.html" class="brand" aria-label="Accueil">
-                    <img class="brand-logo" src="medias/logo.png" alt="Lea Thiebert logo">
+                    <img class="brand-logo" src="medias/logo.png"
+                        alt="Lea Thiebert logo">
                 </a>
                 <ul class="nav-links">
-                    <li><a class="nav-link" data-page="home" href="index.html">Accueil</a></li>
+                    <li><a class="nav-link" data-page="home"
+                            href="index.html">Accueil</a></li>
                     <li><a class="nav-link" data-page="projects"
                             href="projets.html">Projets</a></li>
                     <li><a class="nav-link" data-page="contact"
@@ -34,118 +191,210 @@
             <section class="hero container" id="hero">
                 <div class="hero-grid">
                     <div class="reveal">
-                        <p class="eyebrow">Etudiante 2ème année MMI • Recherche de stage de 3ème
-                            année dans le milieu du Graphisme et de la Communication</p>
+                        <p class="eyebrow">Etudiante 2ème année MMI • Recherche
+                            de stage de 3ème
+                            année dans le milieu du Graphisme et de la
+                            Communication</p>
                         <h1>Bienvenue sur mon site porfolio ! </h1>
                         <p>
-                            Je suis Léa Thiébert, étudiante en 3ᵉ année de BUT Mulitmédias et Métiers
+                            Je suis Léa Thiébert, étudiante en 3ᵉ année de BUT
+                            Multimédias et Métiers
                             de l'Internet. Passionnée par le
-                            design graphique, le web et la création numérique, je cherche un stage
-                            rémunéré du 8 mars au 26 juin 2027 dans le milieu du Graphisme et de la
+                            design graphique, le web et la création numérique,
+                            je cherche un stage
+                            rémunéré de 14 semaines du 8 mars au 18 juin 2027 dans le milieu du
+                            Graphisme et de la
                             Communication.
                         </p>
                         <div class="hero-actions">
-                            <a class="btn btn-primary" href="projets.html">Explorer mes créations
+                            <a class="btn btn-primary"
+                                href="projets.html">Explorer mes créations
                                 web</a>
-                            <a class="btn btn-outline" href="#cv">En savoir plus sur mes expériences</a>
+                            <a class="btn btn-outline" href="#cv">En savoir plus
+                                sur mes expériences</a>
                         </div>
                     </div>
                     <aside class="hero-card-aside">
                         <img src="medias/post-its-wide-eyes.png"
-                            alt="Illustration post-its yeux ouverts" class="img-wide">
+                            alt="Illustration post-its yeux ouverts"
+                            class="img-wide">
                         <img src="medias/post-its-closed-eyes.png"
-                            alt="Illustration post-its yeux fermés" class="img-closed">
+                            alt="Illustration post-its yeux fermés"
+                            class="img-closed">
                     </aside>
                 </div>
             </section>
 
-            <section class="container" id="skills">
-                <h2 class="section-title reveal">Logiciels &amp; outils</h2>
+            <!-- SECTION À PROPOS DE MOI -->
+            <section class="container" id="about">
+                <h2 class="section-title reveal">À propos de moi</h2>
                 <p class="section-intro reveal">
-                    Les logiciels que j'utilise au quotidien pour mes projets de graphisme,
-                    web et création audio.
+                    Quelques traits de caractère et compétences qui me
+                    définissent
                 </p>
-                <div class="skills-grid reveal">
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/figma/390f47" alt="Figma" loading="lazy">
-                        <span>Figma</span>
+
+                <div class="about-showcase reveal">
+                    <!-- flèches courbes à main levée, en coordonnées d'un viewBox 800x600 -->
+                    <svg class="about-arrows" viewBox="0 0 800 600"
+                        preserveAspectRatio="none">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="8"
+                                markerHeight="8" refX="6" refY="4"
+                                orient="auto">
+                                <path d="M0,0 L8,4 L0,8 Z" fill="#1f2430" />
+                            </marker>
+                        </defs>
+                        <path d="M110,60 C170,60 210,90 250,140"
+                            marker-end="url(#arrowhead)" />
+                        <path d="M90,290 C170,290 210,290 260,300"
+                            marker-end="url(#arrowhead)" />
+                        <path d="M110,510 C170,520 210,500 260,470"
+                            marker-end="url(#arrowhead)" />
+                        <path d="M690,60 C630,60 590,90 550,140"
+                            marker-end="url(#arrowhead)" />
+                        <path d="M710,290 C630,290 590,290 540,300"
+                            marker-end="url(#arrowhead)" />
+                        <path d="M690,510 C630,520 590,500 540,470"
+                            marker-end="url(#arrowhead)" />
+                    </svg>
+
+                    <div class="about-photo-wrap">
+                        <img src="medias/presentation.png" alt="Portrait de Léa Thiébert"
+                            class="about-photo">
                     </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobephotoshop/390f47" alt="Photoshop" loading="lazy">
-                        <span>Photoshop</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobeillustrator/390f47" alt="Illustrator" loading="lazy">
-                        <span>Illustrator</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobeindesign/390f47" alt="InDesign" loading="lazy">
-                        <span>InDesign</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobeaudition/390f47" alt="Adobe Audition" loading="lazy">
-                        <span>Audition</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/adobepremierepro/390f47" alt="Premiere Pro" loading="lazy">
-                        <span>Premiere Pro</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/canva/390f47" alt="Canva" loading="lazy">
-                        <span>Canva</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/blender/390f47" alt="Blender" loading="lazy">
-                        <span>Blender</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/visualstudiocode/390f47" alt="VS Code" loading="lazy">
-                        <span>VS Code</span>
-                    </div>
-                    <div class="skill-chip">
-                        <img class="skill-icon" src="https://cdn.simpleicons.org/github/390f47" alt="GitHub" loading="lazy">
-                        <span>GitHub</span>
-                    </div>
+
+                    <article class="quality-item quality-1">
+                        <button class="quality-toggle" aria-expanded="false">
+                            Créative
+                            <span class="quality-plus">+</span>
+                        </button>
+                        <p class="quality-detail">
+                            Depuis toute petite, j'ai toujours eu le goût de la
+                            création. Au lycée, la spécialité
+                            Arts Plastiques m'a confirmée dans ce choix
+                            d'orientation vers les métiers artistiques.
+                        </p>
+                    </article>
+
+                    <article class="quality-item quality-2">
+                        <button class="quality-toggle" aria-expanded="false">
+                            Curieuse
+                            <span class="quality-plus">+</span>
+                        </button>
+                        <p class="quality-detail">
+                            Toujours à l'affût des nouvelles tendances, j'aime
+                            comprendre comment les choses fonctionnent avant de
+                            les utiliser ou de les détourner.
+                        </p>
+                    </article>
+
+                    <article class="quality-item quality-3">
+                        <button class="quality-toggle" aria-expanded="false">
+                            Patiente
+                            <span class="quality-plus">+</span>
+                        </button>
+                        <p class="quality-detail">
+                            Je porte une grande attention à mes travaux, quitte
+                            à reprendre un détail plusieurs fois jusqu'à ce
+                            qu'il soit vraiment juste.
+                        </p>
+                    </article>
+
+                    <article class="quality-item quality-4">
+                        <button class="quality-toggle" aria-expanded="false">
+                            Meneuse
+                            <span class="quality-plus">+</span>
+                        </button>
+                        <p class="quality-detail">
+                            Souvent cheffe de projet, je sais fédérer une équipe
+                            et mener un projet à son terme, tout en gardant une
+                            bonne ambiance au sein des participants
+                        </p>
+                    </article>
+
+                    <article class="quality-item quality-5">
+                        <button class="quality-toggle" aria-expanded="false">
+                            À l'écoute
+                            <span class="quality-plus">+</span>
+                        </button>
+                        <p class="quality-detail">
+                            Membre de la cellule Égalité Diversité et Inclusion,
+                            j'ai appris à écouter et à faire avancer les choses
+                            concrètement.
+                        </p>
+                    </article>
+
+                    <article class="quality-item quality-6">
+                        <button class="quality-toggle" aria-expanded="false">
+                            Engagée
+                            <span class="quality-plus">+</span>
+                        </button>
+                        <p class="quality-detail">
+                            Je m'implique pour améliorer le quotidien des
+                            étudiants, notamment via mon mandat de représentante
+                            des étudiants à Saint-Dié-des-Vosges au sein du
+                            collégium et de l'Université de Lorraine.
+                        </p>
+                    </article>
                 </div>
             </section>
 
             <!-- SECTION CV PIMPÉE -->
-<section class="container" id="cv">
-    <h2 class="section-title reveal">Mon CV</h2>
+            <section class="container" id="cv">
+                <h2 class="section-title reveal">Mon CV</h2>
 
-    <div class="cv-grid reveal">
-        <!-- Côté gauche : Image du CV avec effet scotch & rotation -->
-        <div class="cv-preview-wrapper">
-            <div class="cv-tape"></div>
-            <img src="medias/mon-cv.png" alt="Aperçu du CV de Léa Thiébert" class="cv-img">
-        </div>
+                <div class="cv-grid reveal">
+                    <!-- Côté gauche : Image du CV avec effet scotch & rotation -->
+                    <div class="cv-preview-wrapper">
+                        <div class="cv-tape"></div>
+                        <img src="medias/mon-cv.png"
+                            alt="Aperçu du CV de Léa Thiébert" class="cv-img">
+                    </div>
 
-        <!-- Côté droit : Carte info stylisée -->
-        <aside class="cv-card">
-            <h3>Parcours &amp; Compétences</h3>
-            
-            <p class="cv-text">
-                En formation BUT MMI, j'allie <strong>créativité visuelle</strong> et <strong>technique web</strong>. Tu peux consulter l'aperçu de mon CV ou le télécharger directement en version PDF.
-            </p>
+                    <!-- Côté droit : Carte info stylisée -->
+                    <aside class="cv-card">
+                        <h3>Parcours &amp; Compétences</h3>
 
-            <a href="medias/cv-lea-thiebert.pdf" class="btn btn-primary cv-btn" download>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Télécharger le CV (PDF)
-            </a>
-        </aside>
-    </div>
-</section>
+                        <p class="cv-text">
+                            En formation BUT MMI, j'allie <strong>créativité
+                                visuelle</strong> et <strong>technique
+                                web</strong>. Tu peux consulter l'aperçu de mon
+                            CV ou le télécharger directement en version PDF.
+                        </p>
+
+                        <a href="medias/cv-lea-thiebert.pdf"
+                            class="btn btn-primary cv-btn" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Télécharger le CV (PDF)
+                        </a>
+                    </aside>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer">
-            <div class="container">2026 - Portfolio Lea Thiebert</div>
+            <div class="container">2026 - Portfolio Léa Thiébert</div>
         </footer>
 
         <script src="main.js"></script>
-    </body>
 
+        <!-- Script pour l'accordéon de la section "à propos" -->
+        <script>
+            document.querySelectorAll('#about .quality-toggle').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const item = btn.closest('.quality-item');
+                    const isOpen = item.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', isOpen);
+                });
+            });
+        </script>
+    </body>
 </html>
