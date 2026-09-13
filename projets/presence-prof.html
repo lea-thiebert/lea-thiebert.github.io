@@ -1,66 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 7</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Présence Professionnelle</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-7.pdf" aria-label="Aperçu PDF du projet 7"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 7</p>
-				<h1>Interface culturelle</h1>
-				<div class="project-tags">
-					<span>communication</span>
-					<span>EDI</span>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/presence-prof/presence-prof-img1.png"
+								alt="Image de couverture de mon rendu de présence professionnelle">
+							<img class="carousel-slide"
+								src="../medias/contenus/presence-prof/presence-prof-img6.png"
+								alt="État des lieux avec un protrait chinois">
+							<img class="carousel-slide"
+								src="../medias/contenus/presence-prof/presence-prof-img5.png"
+								alt="Premier travail graphique sur mon caractère et mes valeurs">
+							<img class="carousel-slide"
+								src="../medias/contenus/presence-prof/presence-prof-img2.png"
+								alt="Première recherche de logotype, avec des croquis et des essais ">
+							<img class="carousel-slide"
+								src="../medias/contenus/presence-prof/presence-prof-img3.png"
+								alt="Choix final du logotype, avec un effet de collage appliqué">
+							<img class="carousel-slide"
+								src="../medias/contenus/presence-prof/presence-prof-img4.png"
+								alt="Mon Brandboard, avec le logo, la palette de couleurs et les typographies choisies">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Une proposition pour présenter un contenu culturel avec des repères visuels nets et des sections faciles à lire.</p>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">SAE 204 1ère année de MMI</p>
+					<h1>Présence Professionnelle</h1>
+					<div class="project-tags">
+						<span>graphisme</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Dans le cadre de ce projet, j'ai travaillé sur ma présence en ligne
+							professionnelle en développant une identité visuelle complète,
+							ainsi que sur la production de messages écrits professionnels ,
+							à travers la réalisation d'un CV et d'une lettre de motivation intégrant
+							cette même identité graphique.<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Dans un premier temps, j'ai conçu un moodboard et un brandboard afin
+								de définir une identité visuelle personnelle cohérente, incluant un logo
+								et une palette de couleurs me représentant, posant ainsi les bases d'une
+								image professionnelle identifiable.</li>
+
+							<li>Ensuite, j'ai créé un compte LinkedIn, enrichi de mes expériences, de
+								mes projets et d'une photo de profil adaptée, afin de commencer à
+								développer ma visibilité et ma communication auprès d'un réseau
+								professionnel de manière réfléchie et stratégique.</li>
+
+							<li>Enfin, j'ai réalisé un CV et une lettre de motivation personnalisés,
+								en
+								y intégrant mon identité graphique (logo, palette de couleurs,
+								typographie), afin de produire des documents à la fois clairs,
+								esthétiques et professionnels, cohérents avec le reste de mes supports
+								de communication.</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>Le projet travaille la présentation d'un contenu éditorial sans surcharge d'éléments.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Hiérarchisation, zones de lecture et ton graphique.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Un support adapté aux contenus qui ont besoin d'être parcourus vite et clairement.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce travail m'a permis de mieux comprendre comment me positionner dans un
+						milieu professionnel et cibler les attentes des recruteurs. La rédaction
+						du CV et de la lettre de motivation m'a demandé de structurer mon discours
+						et d'adopter un ton adapté aux codes professionnels, tout en renforçant la
+						cohérence visuelle de l'ensemble de mes supports de communication.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>J'ai été seule en charge de la construction de mon personal branding, de
+						l'identité visuelle jusqu'aux supports écrits (CV, lettre de motivation,
+						LinkedIn).</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/ai.png" alt="Adobe Illustrator" title="Adobe Illustrator">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Léa Thiébert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

@@ -1,66 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 8</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Collecte et précarité menstruelle</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+			<div class="project-hero">
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Affiches</button>
+					</div>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-8.pdf" aria-label="Aperçu PDF du projet 8"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 8</p>
-				<h1>Campagne visuelle</h1>
-				<div class="project-tags">
-					<span>graphisme</span>
-					<span>communication</span>
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/edi/edi-menstru-img2.png"
+								alt="Affiche présente à l'IUT, prevenant de la collecte de serviettes hygiéniques et indiquant le lieu de dépôt">
+							<img class="carousel-slide"
+								src="../medias/contenus/edi/edi-menstru-img1.png"
+								alt="Affiche sensibilisant à la précarité menstruelle, avec des chiffres clés et des informations sur le sujet">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+				<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption"></p>
 				</div>
-				<p>Une fiche projet qui met en avant une piste graphique forte, pensée pour exister à la fois en numérique et en diffusion papier.</p>
+
+				<div class="project-copy reveal">
+					<p class="eyebrow">Projet Égalité Diversité et Inclusion</p>
+					<h1>Collecte et informations sur la précarité menstruelle</h1>
+					<div class="project-tags">
+						<span>graphisme</span>
+						<span>edi</span>
+					</div>
+					<p>
+
+						<strong>Contexte :</strong><br>
+						Lors de ma 2ème année à la cellule EDI, l'IUT a réussi à implémenter 2
+						distributeurs de serviettes hygiéniques. En lien avec cette arrivée, la
+						cellule EDI m'a commissionnée pour réaliser deux supports de communication
+						: une affiche informant de la collecte, et une affiche sur la précarité
+						menstruelle étudiante.<br>
+
+						<strong>Axe d'analyse :</strong><br>
+						<ul>
+							<li>Dans un premier temps, j'ai réalisé une affiche indiquant le lieu de
+								la collecte, ouverte aussi bien aux personnels qu'aux étudiants de
+								l'IUT, accompagnée de visuels mettant en scène des serviettes
+								hygiéniques.</li>
+
+							<li>Ensuite, j'ai conçu le flyer, composé d'informations sur la précarité
+								menstruelle (nombre d'étudiantes concernées, entre autres chiffres
+								clés), afin de sensibiliser à l'ampleur du problème au-delà du simple
+								dispositif de collecte.</li>
+						</ul>
+					</p>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>La page sert à résumer un système visuel dans une forme courte et accessible.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Choix des couleurs, équilibre des masses et rendu final.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Une direction visuelle lisible, avec suffisamment de caractère pour accrocher le regard.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce projet m'a énormément tenu à cœur, car cette action a permis de
+						récolter suffisamment de serviettes pour couvrir 2 ans de besoins. Voir un
+						impact aussi concret et durable découler directement de mon travail a été
+						particulièrement gratifiant.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>J'ai été en charge de la conception graphique des deux supports de
+						communication, de l'affiche annonçant la collecte jusqu'à l'affiche de
+						sensibilisation sur la précarité menstruelle.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Lea Thiebert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<script src="../pdf-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

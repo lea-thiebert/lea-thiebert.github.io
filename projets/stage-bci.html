@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Léa Thiébert | Stage Bureau de la Communication
 			Interministérielle</title>
-		<link rel="icon" type="image/png" href="medias/logo.png">
+		<link rel="icon" type="image/png" href="../medias/logo.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link
@@ -34,9 +34,61 @@
 			<a class="project-back reveal" href="../projets.html">← Retour au mur de
 				post-its</a>
 			<div class="project-hero">
-				<div class="project-preview reveal">
-					<div class="pdf-carousel" data-pdf="../medias/projets/projet-8.pdf"
-						aria-label="Aperçu PDF du projet 8"></div>
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img1.png"
+								alt="Page de garde de mon Rapport de Stage au Bureau de la Communication Interministérielle">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img2.png"
+								alt="Présentation de la refonte de la page “Amicale” entre l’ancien intranet (en haut) et le nouveau (en bas)">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img3.png"
+								alt="L’espace “en un clic” a été simplifié, mis sur la forme d’une section “applications” et formulaire, cette partie de la page d’accueil permet d’accéder à ces fonctionnalités plus facilement ">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img4.png"
+								alt="Ici, la barre des tâches et la composition des onglets des boutons du menu on été modifié pour simplifier la navigation ">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img5.png"
+								alt="L’interface des actualités a également été simplifié avec une simple barre figurant sur la page d’accueil. L’ancienne rubrique occupait énormément de place, et avait un aspect trop dépassé.">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img6.png"
+								alt="On peut remarquer le contraste entre EzPublish, une interface avec beaucoup d’informations, et celle de Joomla en bas, qui ressemble plus à une interface classique de traitement de texte et plus facile à prendre en main.">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img7.png"
+								alt="Capture d’écran du CMS Joomla sur le nouveau site de l’intranet ">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img8.png"
+								alt="Page de garde du RASED 2024 ">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img9.png"
+								alt="Page de garde que j'ai réalisé pour le RASED 2025">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img10.png"
+								alt="Un exemple de fiche envoyée, contre ce qui a été retenu pour figurer dans le rapport">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img11.png"
+								alt="Exemple de page réalisée dans le RASED 2025">
+							<img class="carousel-slide"
+								src="../medias/contenus/stage-bci-img/stage-bci-img12.png"
+								alt="Palettes proposée pour le rapport, la dernière étant celle choisie par M.Courroy ">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
 				<div class="project-copy reveal">
 					<p class="eyebrow">Stage de Deuxième année de MMI d'une durée de 8
@@ -127,8 +179,10 @@
 				</article>
 				<article class="project-panel reveal">
 					<h2>Logiciels utilisés</h2>
-					<p>Une direction visuelle lisible, avec suffisamment de caractère pour
-						accrocher le regard.</p>
+					<div class="software-icons">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+						<img src="../medias/icons/ai.png" alt="Adobe Illustrator" title="Adobe Illustrator">
+					</div>
 				</article>
 			</div>
 		</main>

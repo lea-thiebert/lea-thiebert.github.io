@@ -1,66 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 6</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Gestion de projet</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-6.pdf" aria-label="Aperçu PDF du projet 6"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 6</p>
-				<h1>Portfolio de studio</h1>
-				<div class="project-tags">
-					<span>projet perso</span>
-					<span>graphisme</span>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/gestion-projet-img1.png"
+								alt="Apperçu de l'affiche de promotion de la Digiparty">
+							<img class="carousel-slide"
+								src="../medias/contenus/gestion-projet-img2.png"
+								alt="Mise en avant de l'affiche dans des mock-ups de lieux publics et de réseaux sociaux">
+							<img class="carousel-slide"
+								src="../medias/contenus/gestion-projet-img3.png"
+								alt="Calcul du budget global de l'événement, avec les postes de dépenses et les sources de financement">
+							<img class="carousel-slide"
+								src="../medias/contenus/gestion-projet-img4.png"
+								alt="Présentation du sac réalisé au fab lab, avec le logo de l'événement">
+							<img class="carousel-slide"
+								src="../medias/contenus/gestion-projet-img5.png"
+								alt="Participants au projet et à la présentation finale avec chacun notre animal avatar">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Une page de présentation qui rassemble plusieurs travaux dans un format net et facile à parcourir.</p>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">SAE 106 1ère année de MMI</p>
+					<h1>Gestion de Projet</h1>
+					<div class="project-tags">
+						<span>graphisme</span>
+						<span>communication</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Pour cette SAE, en lien avec la SAE 103 (Digitails), nous avons créé la
+							Digiparty, un événement festif et participatif organisé à Nancy autour de l'application Digitails, qui permet aux
+							utilisateurs de se rencontrer via des avatars d'animaux. Pensée comme un
+							espace d'exploration de l'identité numérique, de la diversité culturelle
+							et du lien social à l'ère digitale, la Digiparty mêlait ateliers
+							créatifs, animations interactives, performances artistiques, DJ sets et
+							espaces de discussion, à destination d'un public jeune et curieux,
+							sensible aux enjeux de représentation et d'inclusion.<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Dans un premier temps, j'ai structuré le projet selon une méthode de
+								gestion en cascade, en cinq phases : définition des objectifs,
+								planification (rétroplanning, diagramme de Gantt), répartition des
+								rôles, suivi de l'exécution et préparation de l'évaluation
+								post-événement.</li>
+
+							<li>Ensuite, j'ai participé à l'élaboration du budget global, en
+								identifiant les postes de dépenses (location de lieux, matériel
+								technique, cachets des intervenants, consommations sur place) et en
+								sollicitant des sources de financement telles que le Pass Culture et des
+								partenariats associatifs, afin de maintenir un événement gratuit pour
+								les étudiants.</li>
+
+							<li>Puis, nous avons exploité les ressources du fab lab de la salle
+								Molnar pour produire nos supports de communication physiques : tote bags
+								personnalisés au logo Digitails et affiches promotionnelles.</li>
+
+							<li>J'ai également pris l'initiative de contacter des structures locales
+								pour ancrer l'événement dans son écosystème territorial : le Musée des
+								Beaux-Arts de Nancy pour envisager une privatisation, et les
+								organisateurs du Livre sur la Place afin d'éviter tout chevauchement de
+								dates.</li>
+
+							<li>Enfin, j'ai contribué à la présentation orale du projet devant un
+								public en amphithéâtre, en défendant les objectifs, les étapes de
+								réalisation et les choix logistiques et communicationnels
+								effectués.</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>Ce projet imagine une vitrine pour montrer des travaux étudiants avec un rythme régulier.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Mise en grille, traitement des visuels et clarté de navigation.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Un modèle de portfolio simple et efficace, aligné avec l'esprit du site principal.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce projet m'a permis de développer une vision globale de la gestion
+						événementielle, de la planification au budget jusqu'à la communication.
+						J'ai particulièrement retenu l'importance de préserver l'accessibilité de
+						l'événement : maintenir une entrée gratuite m'a semblé essentiel face à la
+						précarité étudiante, un choix assumé qui a renforcé l'image inclusive du
+						projet.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>J'ai été impliquée sur plusieurs volets clés du projet : la
+						planification générale, la construction du budget et la recherche de
+						financements, la production de supports de communication au fab lab, la
+						prise de contact avec des partenaires culturels locaux, ainsi que la
+						présentation finale du projet à l'oral.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/figma.png" alt="Figma" title="Figma">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Léa Thiébert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

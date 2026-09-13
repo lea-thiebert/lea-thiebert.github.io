@@ -1,66 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 10</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Communication Purimédias</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-10.pdf" aria-label="Aperçu PDF du projet 10"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 10</p>
-				<h1>Tableau d'ensemble</h1>
-				<div class="project-tags">
-					<span>EDI</span>
-					<span>projet perso</span>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img1.png"
+								alt="Moodboard que j'ai réalisé au début du projet pour définir l'ambiance visuelle">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img2.png"
+								alt="Brandboard créé par Ambre FONTANI, composé de son motif de flocon, quelques mock-ups, notre choix de couleurs et de typographies, et le logo que j'ai réalisé">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img3.png"
+								alt="Mock-ups textiles, style goodies et d'équipements sportifs, avec le logo de l'association Terres Polaires">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img4.png"
+								alt="Recto du flyer A5 réalisé également par Ambre">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img5.png"
+								alt="Verso du flyer A5 réalisé également par Ambre">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img6.png"
+								alt="Affiche A3 réalisée par Ambre, expliquant le projet et les valeurs de l'association, ainsi qu'un lien vers le Linktree">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img7.png"
+								alt="Mock-ups Figma du Linktree et des réseaux sociaux que j'ai réalisé">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-pluri/com-pluri-img8.png"
+								alt="Apperçus du site de l'assocation et de ses différents onglets, que j'ai réalisé sur Figma">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Une page de clôture qui résume les intentions du portfolio avec un format visuel très direct.</p>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">SAE 302 2ème année de MMI</p>
+					<h1>Communication Plurimédias</h1>
+					<div class="project-tags">
+						<span>graphisme</span>
+						<span>communication</span>
+						<span>audiovisuel</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Nous avons été commissionnés par l'association Terres Polaires,
+							Expéditions, Savoirs & Découvertes pour concevoir l'ensemble de sa
+							stratégie de communication et son identité visuelle. L'association a pour
+							mission de promouvoir l'aventure respectueuse de l'environnement, en
+							privilégiant des modes de déplacement doux reposant sur la seule force
+							musculaire. . Positionnée entre
+							aventure extrême et expédition scientifique citoyenne, elle s'incarne à
+							travers son fondateur Ludovic Seuillot, guide polaire expérimenté, et
+							défend des valeurs de respect écologique, d'engagement physique, de
+							transparence et de science citoyenne.<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Dans un premier temps, nous avons construit la stratégie de
+								communication du projet dans son ensemble : introduction, message
+								central, objectifs, acteurs, livrables et contraintes, complétés par des
+								outils d'analyse stratégique (SWOT, TOWS, SMART, CAC, copy strat) et un
+								rétroplanning, ainsi que la définition des cibles, personas et messages
+								clés.</li>
+
+							<li>Ensuite, nous avons élaboré la charte graphique de l'association,
+								autour d'un logo vectoriel représentant un élan formant les initiales de
+								Terres Polaires, décliné en icône ou avec le nom complet. La palette de
+								couleurs évoque à la fois le milieu polaire (bleus) et les valeurs de
+								l'association (rouge pour le sport, vert pour l'écologie), avec des
+								typographies sans serif et arrondies faisant écho aux formes du logo.
+								Ambre a complété cette identité avec un motif de flocons vectoriels,
+								utilisé sur les supports de communication.</li>
+
+							<li>Puis, nous avons conçu le site web, structuré en trois pages
+								(Accueil, À propos, Donations), pensé au format téléphone puisque le
+								site est principalement destiné à être consulté via un QR code scanné
+								depuis un mobile. Lien vers la maquette figma : <a
+									href="https://www.figma.com/design/lTp1kv8xHpvACtHNc8Sw0a/Mock-ups-Terres-Polaires?t=esMb462fJVY0fHvO-1"
+									target="_blank"
+									rel="noopener noreferrer"><strong>LinkTree Terres
+										Polaires</strong></a></li>
+
+							<li>Enfin, nous avons défini une stratégie de présence sur les réseaux
+								sociaux, différenciée selon les plateformes : YouTube pour les
+								interviews et formats courts, Instagram pour les annonces (restock de
+								tee-shirts, présentation des sponsors), et Facebook pour animer la
+								communauté autour des affiches et flyers de l'association.</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>Ce dernier projet sert de synthèse visuelle et de point d'entrée vers le reste du travail.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Présentation globale, lisibilité et cohérence d'ensemble.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Une conclusion simple qui ferme la série tout en gardant un ton accessible.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce projet m'a permis de travailler une stratégie de communication
+						complète pour une cause qui me tient à cœur, en alliant réflexion
+						stratégique, identité graphique et déclinaison multi-supports cohérente
+						sur le web et les réseaux sociaux.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>J'ai été en partie responsable du graphisme (choix des couleurs,
+						logo).J'ai également contribué à la construction de la stratégie de
+						communication
+						(analyses stratégiques, cibles, messages clés), à la conception du site
+						web et à la définition de la stratégie de diffusion sur les réseaux
+						sociaux, ainsi qu'à la préparation et à la conduite de l'interview de
+						Ludovic Seuillot, en lien avec le reste de l'équipe pour la charte
+						graphique et la partie audiovisuelle.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/figma.png" alt="Figma" title="Figma">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+						<img src="../medias/icons/ai.png" alt="Illustrator" title="Illustrator">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Léa Thiébert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

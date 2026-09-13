@@ -1,66 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 8</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Concevoir un projet et sa communication</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-8.pdf" aria-label="Aperçu PDF du projet 8"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 8</p>
-				<h1>Campagne visuelle</h1>
-				<div class="project-tags">
-					<span>graphisme</span>
-					<span>communication</span>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img1.png"
+								alt="Présentation de la communication complète autour de l'artiste SOLOVA">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img2.png"
+								alt="Moodboard que j'avais créé pour définir l'univers visuel de l'artiste SOLOVA">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img3.png"
+								alt="Brandboard définissant l'identité visuelle de l'artiste, avec mockups, typo, couleurs et logo">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img4.png"
+								alt="Affiche du concert de l'artiste, avec les différentes dates et lieux">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img5.png"
+								alt="Personas définissant le public cible de l'artiste, avec ses caractéristiques et ses besoins">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img6.png"
+								alt="Réseaux sociaux de l'artiste avec mosaiques de posts et stories Instagram">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img7.png"
+								alt="Mockups de l'album et de l'affiche de la tournée">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img8.png"
+								alt="Installations audiovisuelles pour l'interview et le tournage du teaser">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img9.png"
+								alt="Extrait du site wordpress de l'artiste, avec la page d'accueil et la page de contact">
+							<img class="carousel-slide"
+								src="../medias/contenus/concept-com/concept-com-img10.png"
+								alt="Réalisation de l'affiche et de la pochette de l'album au fab lab, avec les impressions papier cartonné">
+
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Une fiche projet qui met en avant une piste graphique forte, pensée pour exister à la fois en numérique et en diffusion papier.</p>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">SAE 202 1ère année de MMI</p>
+					<h1>Concevoir un projet et sa communication</h1>
+					<div class="project-tags">
+						<span>communication</span>
+						<span>dev web</span>
+						<span>graphisme</span>
+						<span>Audiovisuel</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Ce projet consistait à concevoir la communication complète autour d'une
+							artiste fictive, pensée comme un produit culturel à part entière :
+							usages, valeurs, identité visuelle, stratégie de communication et outils
+							de promotion. Nous avons créé SOLOVA (Kalyna Amara), chanteuse afro-slave
+							mêlant soul et influences d'Europe de l'Est, portée par une tournée
+							baptisée Slavic Soulchild Tour et un engagement social fort, reverser une
+							partie des bénéfices à une association ukrainienne.<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Dans un premier temps, nous avons défini l'identité et le
+								positionnement de SOLOVA : univers visuel et musical, histoire, valeurs,
+								proposition de valeur autour de son authenticité et de sa double
+								culture, avec une tournée pensée comme prolongement direct de son
+								album.</li>
+
+							<li>Ensuite, nous avons construit le ciblage marketing : un public
+								naturel d'amateurs de soul (30-50 ans), élargi à un public plus jeune
+								via un ancrage TikTok imaginé pendant le confinement, formalisé par un
+								persona détaillé.</li>
+
+							<li>Puis, nous avons déployé une stratégie de communication multicanale
+								(Instagram, YouTube, site WordPress), avec une écriture éditoriale à la
+								première personne pour humaniser la présence en ligne de l'artiste,
+								ainsi qu'une identité graphique complète (moodboard, brandboard, logo,
+								affiches, pochettes d'album), mes propositions graphiques ayant été
+								retenues par le groupe pour la charte finale.</li>
+
+							<li>J'ai également participé à la production vidéo en incarnant SOLOVA en
+								anglais lors d'une interview scénarisée que j'ai écrite, ainsi qu'au
+								teaser de la tournée. En parallèle, j'ai pris en charge la conception et
+								le développement du site WordPress (thème Hello, plugin Elementor), en
+								intégrant l'ensemble des contenus multimédias optimisés selon les
+								supports.</li>
+
+							<li>Enfin, j'ai contribué à l'impression des supports au fab lab
+								(pochettes de vinyle, affiches A3), contacté des salles de concert pour
+								évaluer leur faisabilité, et pris en charge la présentation orale finale
+								en amphithéâtre, en partie en anglais, ainsi que le PowerPoint de
+								restitution.</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>La page sert à résumer un système visuel dans une forme courte et accessible.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Choix des couleurs, équilibre des masses et rendu final.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Une direction visuelle lisible, avec suffisamment de caractère pour accrocher le regard.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce projet m'a permis de construire une identité artistique de A à Z, en
+						travaillant à la fois la stratégie, le graphisme, le développement web et
+						la prise de parole multilingue. J'ai particulièrement apprécié voir mes
+						propositions graphiques adoptées par le groupe, ainsi qu'incarner SOLOVA
+						pour l'interview.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>J'ai été particulièrement impliquée sur la direction graphique,
+						l'écriture et l'interprétation de SOLOVA lors de l'interview, le
+						développement du site WordPress, ainsi que la présentation orale finale,
+						en complément du travail collectif sur la stratégie et le budget.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/figma.png" alt="Figma" title="Figma">
+						<img src="../medias/icons/ai.png" alt="Adobe Illustrator"
+							title="Adobe Illustrator">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+						<img src="../medias/icons/pr.png" alt="Première Pro" title="Première Pro">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Léa Thiébert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

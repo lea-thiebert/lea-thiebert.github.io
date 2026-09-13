@@ -1,66 +1,230 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 8</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Communication transmédias</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-8.pdf" aria-label="Aperçu PDF du projet 8"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 8</p>
-				<h1>Campagne visuelle</h1>
-				<div class="project-tags">
-					<span>graphisme</span>
-					<span>communication</span>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+						<button class="phase-btn" data-target="phase2">Supports prints</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img1.png"
+								alt="Présentation de mes réalisations pour le projet de communication transmédias">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img2.png"
+								alt="Moodboard qui m'a inspiré pour le projet">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img3.png"
+								alt="Présentation des différentes poses du personnage Marianne, avec les différentes expressions, ainsi que les élements graphiques (couleurs et traces de pas)">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img4.png"
+								alt="Intégration de la Marianne dans l'environnement urbain, avec les space invaders et les traces de pas">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img5.png"
+								alt="Utilisation de la réalité augmentée pour faire apparaître Marianne sur les tablettes lors des ateliers, Kakémonos mettant en valeur le QR pour y accéder">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img6.png"
+								alt="Intégration de la Marianne dans le milieu urbain, avec de l'affichage sur abris bus">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img7.png"
+								alt="Présentation du livret pédagogique, avec les différentes activités à réaliser par les enfants">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img8.png"
+								alt="Partie 1 du site web Sur les pas de Marianne, présentant le projet et les activités à réaliser">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img9.png"
+								alt="Partie 2 du site web Sur les pas de Marianne, présentant le projet et les activités à réaliser">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img10.png"
+								alt="Partie 3 du site web Sur les pas de Marianne, présentant le projet et les activités à réaliser">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Carrousel Phase 2 -->
+					<div class="image-carousel" id="phase2">
+						<button class="carousel-btn prev"
+							aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img11.png"
+								alt="Affiche Sur les pas de Marianne, mise en avant du Tribunal Judicaire d'Épinal">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img12.png"
+								alt="Affiche Sur les pas de Marianne, mise en avant de la préfecture des Vosges">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img13.png"
+								alt="Affiche sur les pas de Marianne, mise en avant de la mairie d'Épinal">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img14.png"
+								alt="Affichage sur les pas de Marianne, mise en avant du mémorial place Foch d'Épinal">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img15.png"
+								alt="Page de couverture du livret pédagogique Sur les pas de Marianne">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img16.png"
+								alt="Page intérieure du livret pédagogique, présentant les activités à compléter par les élèves (texte à trous)">
+							<img class="carousel-slide"
+								src="../medias/contenus/com-transmedias/com-trans-img17.png"
+								alt="Seconde page intérieure du livret pédagogique, présentant les activités à compléter par les élèves (lier des mots, retrouver des éléments à Marianne)">
+
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Une fiche projet qui met en avant une piste graphique forte, pensée pour exister à la fois en numérique et en diffusion papier.</p>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">SAE 301 2ème année de MMI</p>
+					<h1>Communication transmédias</h1>
+					<div class="project-tags">
+						<span>communication</span>
+						<span>graphisme</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Nous avions à réaliser un projet de communication transmédias en lien
+							avec notre stage. J'ai donc créé « Sur les pas de
+							Marianne » qui vise à rendre la République
+							accessible et désirable aux enfants des Vosges, en incarnant Marianne
+							comme personnage vivant et en valorisant le patrimoine local
+							(préfecture,
+							mairies, mémorial). La cible primaire est constituée des enfants de 6 à
+							12 ans (scolaire et journées du patrimoine), avec les enseignants et
+							familles en cible secondaire, le grand public vosgien en cible
+							tertiaire,
+							et l'Éducation nationale, les mairies et associations culturelles comme
+							co-constructeurs institutionnels.<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Dans un premier temps, j'ai construit le concept narratif :
+								Marianne,
+								présentée comme une exploratrice qui arpente Épinal, laisse des indices
+								sur son passage et invite les enfants à la suivre.</li>
+
+							<li>Ensuite, j'ai développé le parcours urbain : des space invaders à
+								son
+								effigie disséminés sur les façades, des empreintes au sol reliant les
+								bâtiments, et des affiches sur le mobilier urbain installant le
+								personnage dans le quotidien des habitants avant même le
+								lancement.</li>
+
+							<li>Puis, j'ai conçu les dispositifs à l'intérieur des bâtiments visités
+								: kakémonos pour poser le cadre narratif, tablettes en réalité
+								augmentée
+								permettant aux enfants d'interagir avec Marianne, et un carnet de
+								voyage
+								servant à la fois de support pédagogique et d'objet souvenir.</li>
+
+							<li>J'ai ensuite structuré le plan de diffusion en trois temps : en
+								amont, un affichage urbain mystérieux et un kit pédagogique pour les
+								enseignants ; pendant la visite, le parcours interactif ; après, la
+								restitution en classe et une récompense (badge et certificat
+								personnalisé) prolongeant l'expérience jusqu'au cercle familial.</li>
+
+							<li>Pour l'identité graphique, j'ai choisi une palette tricolore pop
+								plutôt qu'institutionnelle, des formes organiques et la semelle comme
+								motif récurrent, ainsi qu'une Marianne réinventée dans un style BD
+								inspiré de Plantu.</li>
+
+							<li>Enfin, j'ai défini la stratégie digitale : un site web comme support
+								de référence, un Reel Instagram teasing pour le lancement, des
+								carrousels Instagram pour capter parents et enseignants, et une
+								présence
+								LinkedIn pour toucher les profils institutionnels relais (directeurs
+								d'école, conseillers pédagogiques).</li>
+							<li>Accès au lien du Figma : <strong><a
+										href="https://www.figma.com/design/wwSmEoPszeHxTSnFZBZtuN/Untitled?node-id=0-1&t=HFF71kQAeYYyIPun-1"
+										target="_blank" rel="noopener noreferrer">Sur les Pas de
+										Marianne</a></strong></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>La page sert à résumer un système visuel dans une forme courte et accessible.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Choix des couleurs, équilibre des masses et rendu final.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Une direction visuelle lisible, avec suffisamment de caractère pour accrocher le regard.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce projet m'a permis de travailler une stratégie de communication
+						complète, du concept narratif jusqu'au plan de diffusion multicanal, en
+						gardant une cohérence entre dispositif physique et digital.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>J'ai été en charge de la conception créative et stratégique de la
+						campagne : élaboration du concept narratif autour de Marianne, définition
+						du parcours urbain et des dispositifs d'expérience (kakémonos, réalité
+						augmentée, carnet de voyage), création de l'identité graphique, ainsi que
+						de la stratégie de diffusion digitale (choix des plateformes, formats et
+						calendrier de publication).</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/figma.png" alt="Figma" title="Figma">
+						<img src="../medias/icons/ai.png" alt="Adobe Illustrator"
+							title="Adobe Illustrator">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Léa Thiébert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

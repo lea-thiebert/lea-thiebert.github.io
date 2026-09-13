@@ -1,65 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 4</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Développement web</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-4.pdf" aria-label="Aperçu PDF du projet 4"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 4</p>
-				<h1>Prototype d'application</h1>
-				<div class="project-tags">
-					<span>EDI</span>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Rendus</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/dev-web-img1.png"
+								alt="Apperçu du site Pretty Safe, Ppage d'accueil avec le menu et les différents produits">
+							<img class="carousel-slide"
+								src="../medias/contenus/dev-web-img2.png"
+								alt="Présetation des extensions vscode utilisées, et aperçu du code HTML du header sur le site">
+							<img class="carousel-slide"
+								src="../medias/contenus/dev-web-img3.png"
+								alt="Apperçu des classes <div> utilisées, avec des éléments jason pour générer les pages dynamiquement">
+							<img class="carousel-slide"
+								src="../medias/contenus/dev-web-img4.png"
+								alt="Élements jason dynamiques utilisés pour générer le contenu des pages du site, avec les images, titres, descriptions et prix des produits">
+							<img class="carousel-slide"
+								src="../medias/contenus/dev-web-img5.png"
+								alt="Utilisation de filezilla pour héberger le site, avec la page permettant de chosisir la partie dynamique et statique du site">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Un écran projet qui met en valeur une idée d'interface compacte, comme une note épinglée dans un carnet de travail.</p>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">SAE 105 1ère année de MMI</p>
+					<h1>Développement web</h1>
+					<div class="project-tags">
+						<span>web</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Nous avions à réaliser un site web e-commerce. De cet exercice est né le
+							projet "Pretty Safe", qui combine « pretty » (joli, féminin) et « safe »
+							(sécurité), l'anglais favorisant une portée internationale. Le site
+							propose des équipements de protection (tasers, bombes au poivre) ainsi
+							que la réservation de cours de self-défense, pour renforcer le sentiment
+							de sécurité des femmes. Le site a été développé en binôme avec Ambre
+							Fontani.<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Dans un premier temps, j'ai pris en main VS Code et ses extensions
+								(Live Server, W3C Validator, Markdown Preview Enhanced), ainsi que Live
+								Share pour travailler en binôme, ce qui a facilité le développement et
+								la collaboration malgré quelques instabilités de l'extension.</li>
+
+							<li>Ensuite, j'ai structuré le site avec un balisage HTML5 sémantique
+								(header, main, section, footer), en approfondissant mes acquis de NSI
+								sur les bonnes pratiques du HTML5, notamment l'imbrication correcte des
+								balises.</li>
+
+							<li>Puis, j'ai mis en place une base de données au format JSON connectée
+								au site via un contrôleur, permettant de générer les pages dynamiquement
+								à partir des données. Cette étape a été la plus exigeante du projet, le
+								cours sur le dynamique étant arrivé un peu tôt par rapport à
+								l'avancement de notre travail.</li>
+
+							<li>Enfin, j'ai assuré l'hébergement du site via FileZilla, en
+								configurant des pages d'erreur personnalisées (403, 404) grâce au
+								fichier .htaccess, ce qui a permis de concrétiser le travail réalisé en
+								local.</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>Cette page sert de vitrine à une idée d'outil pensé pour être lue rapidement sur mobile.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Wireframe, hiérarchie, navigation et lisibilité des contenus.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Une fiche projet simple à parcourir avec un rendu cohérent sur toutes les tailles d'écran.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>Ce projet m'a fait progresser sur toute la chaîne de production d'un
+						site web, du code à la mise en ligne, la partie dynamique ayant été la
+						plus formatrice. J'ai également apprécié travailler en binôme pour la
+						première fois avec Ambre
+						Fontani.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>En charge des pages de vente des tasers, de l'index, du readme, page
+						403, 404, et des CGV</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/vscode.png" alt="Visual Studio Code"
+							title="Visual Studio Code">
+						<img src="../medias/icons/filzeila.png" alt="FileZilla" title="FileZilla">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Léa Thiébert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>

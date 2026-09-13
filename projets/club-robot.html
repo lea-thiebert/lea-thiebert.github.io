@@ -1,66 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lea Thiebert | Projet 9</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles.css">
-</head>
-<body data-page="projects">
-	<header class="site-header">
-		<nav class="nav">
-			<a href="../index.html" class="brand" aria-label="Accueil">
-				<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
-			</a>
-			<ul class="nav-links">
-				<li><a class="nav-link" data-page="home" href="../index.html">Accueil</a></li>
-				<li><a class="nav-link" data-page="projects" href="../projets.html">Projets</a></li>
-				<li><a class="nav-link" data-page="contact" href="../contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Léa Thiébert | Club Robot</title>
+		<link rel="icon" type="image/png" href="../medias/logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body data-page="projects">
+		<header class="site-header">
+			<nav class="nav">
+				<a href="../index.html" class="brand" aria-label="Accueil">
+					<img class="brand-logo" src="../medias/logo.png" alt="Lea Thiebert logo">
+				</a>
+				<ul class="nav-links">
+					<li><a class="nav-link" data-page="home"
+							href="../index.html">Accueil</a></li>
+					<li><a class="nav-link" data-page="projects"
+							href="../projets.html">Projets</a></li>
+					<li><a class="nav-link" data-page="contact"
+							href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main class="container project-page">
-		<a class="project-back reveal" href="../projets.html">← Retour au mur de post-its</a>
-		<div class="project-hero">
-			<div class="project-preview reveal">
-				<div class="pdf-carousel" data-pdf="../medias/projets/projet-9.pdf" aria-label="Aperçu PDF du projet 9"></div>
-			</div>
-			<div class="project-copy reveal">
-				<p class="eyebrow">Projet 9</p>
-				<h1>Page de récit</h1>
-				<div class="project-tags">
-					<span>audiovisuel</span>
-					<span>graphisme</span>
+		<main class="container project-page">
+			<a class="project-back reveal" href="../projets.html">← Retour au mur de
+				post-its</a>
+
+			<div class="project-hero">
+
+				<!-- 1. LA COLONNE DE GAUCHE : Onglets et carrousels -->
+				<div class="project-media">
+					<!-- Boutons d'onglets -->
+					<div class="phase-tabs">
+						<button class="phase-btn active" data-target="phase1">Créations
+							graphiques</button>
+						<button class="phase-btn" data-target="phase2">Photos de la
+							Compétiton</button>
+					</div>
+
+					<!-- Carrousel Phase 1 -->
+					<div class="image-carousel active" id="phase1">
+						<button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot-img1.png"
+								alt="Charte graphique que j'ai réalisé pour le club robot, avec le logo et les couleurs choisies">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot-img2.png"
+								alt="Visuels réalisés pour les tee-shirts des participants à la compétition de robotique">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Carrousel Phase 2 -->
+					<div class="image-carousel" id="phase2">
+						<button class="carousel-btn prev"
+							aria-label="Image précédente">❮</button>
+
+						<div class="carousel-slides">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot/club-robot-photo1.webp"
+								alt="Photo avec tous les membres du club, le matin du départ de la compétition de robotique à Hagueneau">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot/club-robot-photo2.jpg"
+								alt="Visuels des tee-shirts au dos des participants">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot/club-robot-photo3.jpg"
+								alt="Visuels de face, avec la broderie sur la veste à capuche">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot/club-robot-photo4.JPG"
+								alt="L'équipe codant leurs robots pendant la compétition">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot/club-robot-photo5.jpg"
+								alt="Prise de vue de la compétition par l'équipe de communication">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot/club-robot-photo6.jpg"
+								alt="Équipe qui code répondant aux interviews de l'équipe de communication">
+							<img class="carousel-slide"
+								src="../medias/contenus/club-robot/club-robot-photo7.jpg"
+								alt="Photo d'un membre de l'équipe de Saint-Dié-des-Vosges avec la coupe du club robot">
+						</div>
+
+						<button class="carousel-btn next" aria-label="Image suivante">❯</button>
+					</div>
+
+					<!-- Zone de texte pour la légende -->
+					<p class="carousel-caption">Analyse des typographies Figma</p>
 				</div>
-				<p>Une composition plus narrative, construite pour donner un rythme de lecture proche d'un carnet ouvert.</p>
+
+				<!-- 2. LA COLONNE DE DROITE : Le texte du projet -->
+				<div class="project-copy reveal">
+					<p class="eyebrow">EDI 3ème année de MMI</p>
+					<h1>Évènement Journée International des Droits de la Femme</h1>
+					<div class="project-tags">
+						<span>edi</span>
+						<span>graphisme</span>
+					</div>
+					<div>
+						<ul>
+							<strong>Contexte : </strong><br>
+							Le Club Robot est un collectif d'étudiants fabriquant tout type de robots
+							et d'objets technologiques. En mai, le club a participé à la coupe Robot
+							de l'IUT de Haguenau. À cette occasion, Rafael, responsable du club, m'a
+							commissionnée pour créer un logo ainsi que les visuels des tee-shirts
+							portant les prénoms des membres au dos.
+							<br>
+
+							<strong>Axes d'analyse :</strong>
+
+							<li>Dans un premier temps, j'ai créé un logo reprenant les initiales du
+								club (CB), dessiné sous forme de robot en intégrant des yeux et une
+								antenne directement dans les lettres. J'ai ensuite recherché une palette
+								de couleurs en lien avec l'univers de la technologie et de la robotique,
+								afin de poser une charte graphique cohérente.</li>
+
+							<li>Une fois cette charte établie, j'ai réalisé les visuels des
+								tee-shirts en reprenant les prénoms des membres du club, en y ajoutant
+								des éléments graphiques en forme de circuits électriques intégrés aux
+								lettres. Ces tee-shirts ont ensuite été imprimés par mon camarade Eliot
+								Dotti, qui a également brodé le logo et le nom du club sur des vestes à
+								capuche.</li>
+
+							<li>Enfin, j'ai été invitée à me rendre à la coupe Robotique aux côtés
+								d'Ambre Fontani et d'Eliot Dotti, en tant que membre de l'équipe de
+								communication. Notre mission consistait à prendre des photos de la
+								compétition afin de les publier sur le compte Instagram du club.</li>
+
+							<li>A la fin de la compétition, Saint-Dié-des-Vosges s'est
+								placé à la 3ème place, nous permettant de rentrer à l'IUT avec la
+								première coupe du club.</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="project-sections">
-			<article class="project-panel reveal">
-				<h2>Contexte</h2>
-				<p>Le support est pensé pour raconter une idée avec peu de blocs, mais des repères visuels solides.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Rôle</h2>
-				<p>Organisation du récit, fluidité et lecture séquentielle.</p>
-			</article>
-			<article class="project-panel reveal">
-				<h2>Résultat</h2>
-				<p>Une page vivante mais sobre, fidèle au vocabulaire du collage du portfolio.</p>
-			</article>
-		</div>
-	</main>
+			<div class="project-sections">
+				<article class="project-panel reveal">
+					<h2>Bilan personnel</h2>
+					<p>J'ai beaucoup aimé travailler sur ce projet, car il touchait à un sujet
+						qui me tient à cœur. Voir l'installation rester deux semaines au lieu
+						d'une seule journée m'a beaucoup touchée : cela montre que le message est
+						passé et que le dispositif a réellement suscité une réflexion chez les
+						élèves et le personnel, au-delà du simple effet visuel du jour J.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Rôle au sein du projet</h2>
+					<p>J'ai été en charge de la conception graphique de l'affiche teaser, de sa
+						réalisation (choix esthétique noir et blanc, motif des traces de pas).
+						J'ai également été en charge du choix des phrases sexistes à afficher sur
+						les stickers au sol.</p>
+				</article>
+				<article class="project-panel reveal">
+					<h2>Logiciels utilisés</h2>
+					<div class="software-icons">
+						<img src="../medias/icons/ai.png" alt="Adobe Illustrator"
+							title="Adobe Illustrator">
+						<img src="../medias/icons/canva.png" alt="Canva" title="Canva">
+					</div>
+				</article>
+			</div>
+		</main>
 
-	<footer class="site-footer">
-		<div class="container">2026 - Portfolio Lea Thiebert</div>
-	</footer>
+		<footer class="site-footer">
+			<div class="container">2026 - Portfolio Léa Thiébert</div>
+		</footer>
 
-	<script src="../pdf-carousel.js"></script>
-	<script src="../main.js"></script>
-</body>
+		<!-- Scripts -->
+		<script src="../image-carousel.js"></script>
+		<script src="../main.js"></script>
+	</body>
 </html>
